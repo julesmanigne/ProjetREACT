@@ -16,4 +16,14 @@ app.use(cookieParser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
+const mongoose = require('mongoose'); 
+
+mongoose.Promise = global.Promise;
+const dbName = 'my_new_dataBase'; 
+const dbUrl = 'mongodb+srv://test:<password>@cluster0.tefstrq.mongodb.net/?retryWrites=true&w=majority'
+
+// connecting to the database 
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true
+}); 
 module.exports = app;
