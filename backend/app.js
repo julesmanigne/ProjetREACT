@@ -5,6 +5,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var alarmsRouter = require("./routes/alarms");
 
 var app = express();
 
@@ -15,15 +16,28 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/alarms", alarmsRouter);
 
 module.exports = app;
 
 const mongoose = require('mongoose'); 
 
 mongoose.Promise = global.Promise;
-const DataJD = 'DataJD'; 
-const dbUrl = 'mongodb+srv://test:admin@cluster0.tefstrq.mongodb.net/${DataJD}?retryWrites=true&w=majority'
+
+const url = `mongodb+srv://test:admin@clustertest.ok891hn.mongodb.net/testbdd?retryWrites=true&w=majority`;
+
+const connectionParams={
+    useNewUrlParser: true,
+}
 
 // connecting to the database 
-console.log(dbUrl); 
-mongoose.connect(dbUrl); 
+mongoose.connect(url,connectionParams)
+    .then( () => {
+        console.log('Connected to the database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. n${err}`);
+    })
+
+; 
+

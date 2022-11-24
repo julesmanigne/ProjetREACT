@@ -11,6 +11,7 @@ import Widget4 from './components/Widget4';
 import Widget5 from './components/Widget5';
 import Widget6 from './components/Widget6';
 
+
 const darkTheme = createTheme({
     palette: {
       mode: 'dark',
@@ -47,7 +48,7 @@ const App = () => {
                             <Grid item lg={8} md={4}>
                             
                                     <WidgetAlarm>
-
+                                        
                                     </WidgetAlarm>
                                
                             </Grid>
