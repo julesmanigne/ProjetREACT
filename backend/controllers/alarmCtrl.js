@@ -1,3 +1,6 @@
+const {
+    PromiseProvider
+} = require('mongoose')
 const Alarm = require('../models/alarmModel')
 
 createAlarm = (req, res) => {
@@ -13,7 +16,10 @@ createAlarm = (req, res) => {
     const alarm = new Alarm(body)
 
     if (!alarm) {
-        return res.status(400).json({ success: false, error: err })
+        return res.status(400).json({
+            success: false,
+            error: err
+        })
     }
 
     alarm
@@ -43,7 +49,9 @@ updateAlarm = async (req, res) => {
         })
     }
 
-    Alarm.findOne({ _id: req.params.id }, (err, alarm) => {
+    Alarm.findOne({
+        _id: req.params.id
+    }, (err, alarm) => {
         if (err) {
             return res.status(404).json({
                 err,
@@ -72,33 +80,53 @@ updateAlarm = async (req, res) => {
 }
 
 deleteAlarm = async (req, res) => {
-    await Alarm.findOneAndDelete({ _id: req.params.id }, (err, alarm) => {
+    await Alarm.findOneAndDelete({
+        _id: req.params.id
+    }, (err, alarm) => {
         if (err) {
-            return res.status(400).json({ success: false, error: err })
+            return res.status(400).json({
+                success: false,
+                error: err
+            })
         }
 
         if (!alarm) {
             return res
                 .status(404)
-                .json({ success: false, error: `Alarm not found` })
+                .json({
+                    success: false,
+                    error: `Alarm not found`
+                })
         }
 
-        return res.status(200).json({ success: true, data: alarm })
+        return res.status(200).json({
+            success: true,
+            data: alarm
+        })
     }).catch(err => console.log(err))
 }
 
 getAlarm = async (req, res) => {
     await Alarm.find({}, (err, alarms) => {
         if (err) {
-            return res.status(400).json({ success: false, error: err })
+            return res.status(400).json({
+                success: false,
+                error: err
+            })
         }
 
         if (!alarms.length) {
             return res
                 .status(404)
-                .json({ success: false, error: `Alarm not found` })
+                .json({
+                    success: false,
+                    error: `Alarm not found`
+                })
         }
-        return res.status(200).json({ success: true, data: alarms })
+        return res.status(200).json({
+            success: true,
+            data: alarms
+        })
     }).catch(err => console.log(err))
 }
 

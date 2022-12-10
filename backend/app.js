@@ -11,7 +11,9 @@ var app = express();
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(cookieParser());
 
 app.use("/", indexRouter);
@@ -20,24 +22,23 @@ app.use("/alarms", alarmsRouter);
 
 module.exports = app;
 
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-const url = `mongodb+srv://test:admin@clustertest.ok891hn.mongodb.net/testbdd?retryWrites=true&w=majority`;
+const url = `mongodb+srv://test:admin@cluster0.tefstrq.mongodb.net/Collect1?retryWrites=true&w=majority`;
 
-const connectionParams={
+const connectionParams = {
     useNewUrlParser: true,
 }
 
 // connecting to the database 
-mongoose.connect(url,connectionParams)
-    .then( () => {
+mongoose.connect(url, connectionParams)
+    .then(() => {
         console.log('Connected to the database ')
     })
-    .catch( (err) => {
+    .catch((err) => {
         console.error(`Error connecting to the database. n${err}`);
     })
 
-; 
-
+;
