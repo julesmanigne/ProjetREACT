@@ -26,7 +26,9 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-const url = `mongodb+srv://test:admin@cluster0.tefstrq.mongodb.net/Collect1?retryWrites=true&w=majority`;
+
+//const url = `mongodb+srv://test:admin@cluster0.tefstrq.mongodb.net/Collect1?retryWrites=true&w=majority`;  //DB JULES
+const url = `mongodb+srv://test:admin@clustertest.ok891hn.mongodb.net/testbdd?retryWrites=true&w=majority`; //DB DYLAN
 
 const connectionParams = {
     useNewUrlParser: true,
