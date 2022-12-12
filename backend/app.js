@@ -28,7 +28,8 @@ mongoose.Promise = global.Promise;
 
 
 //const url = `mongodb+srv://test:admin@cluster0.tefstrq.mongodb.net/Collect1?retryWrites=true&w=majority`;  //DB JULES
-const url = `mongodb+srv://test:admin@clustertest.ok891hn.mongodb.net/testbdd?retryWrites=true&w=majority`; //DB DYLAN
+//const url = `mongodb+srv://test:admin@clustertest.ok891hn.mongodb.net/testbdd?retryWrites=true&w=majority`; //DB DYLAN
+const url = 'mongodb+srv://marie:<marie123>@cluster0.elosyyz.mongodb.net/?retryWrites=true&w=majority'; // marie
 
 const connectionParams = {
     useNewUrlParser: true,
