@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
-import styles from "/Users/julesm/github/ProjetREACT/frontend/src/index.css";
 
 import {
   Chart as ChartJS,
@@ -44,12 +43,11 @@ export default function Widget6() {
   const date = new Date();
   var day = date.getDate();
   var month = date.getMonth() + 1;
-  var onemonth = date.getMonth() - 1;
+  var onemonth = date.getMonth();
   var year = date.getFullYear();
 
   var currentDate = `${year}-${month}-${day}`;
   var monthAgoDate = `${year}-${onemonth}-${day}`;
-  var startDate = `${onemonth}-${day}`;
 
   var APIKey = "6397a6a3c141c0.63268239";
   var URL_1 =
@@ -71,6 +69,7 @@ export default function Widget6() {
     type: "line",
     responsive: true,
     maintainAspectRatio: false,
+
     plugins: {
       legend: {
         display: false,
@@ -80,9 +79,10 @@ export default function Widget6() {
         color: "rgba(247, 164, 99,1)",
         text: "BTC",
         position: "top",
-        align: "start",
+        align: "center",
         font: {
-          size: 20,
+          family: "Ubuntu Condensed",
+          size: 25,
           weight: "bold",
         },
       },
@@ -97,7 +97,7 @@ export default function Widget6() {
           // zoom options and/or events
           wheel: {
             enabled: true,
-            speed: 0.02,
+            speed: 0.1,
           },
           pinch: {
             enabled: true,
@@ -124,22 +124,34 @@ export default function Widget6() {
         ticks: {
           display: true,
           autoSkip: true,
-          maxTicksLimit: 5,
+          maxTicksLimit: 4,
           maxRotation: 0,
           font: {
-            size: 14,
+            family: "Nunito",
+            size: 12,
+            weight: "bold",
           },
-          fontFamily: "Helvetica",
         },
       },
       y: {
-        display: false,
+        display: true,
         scaleLabel: false,
         ticks: {
           display: false,
         },
         grid: {
           display: false,
+        },
+        ticks: {
+          display: true,
+          autoSkip: true,
+          maxTicksLimit: 3,
+          maxRotation: 0,
+          font: {
+            family: "Nunito",
+            size: 12,
+            weight: "bold",
+          },
         },
       },
     },
@@ -183,6 +195,7 @@ export default function Widget6() {
           return gradient;
         },
         borderWidth: 2,
+        borderCapStyle: "round",
         tension: 0.5,
         pointRadius: 0,
         pointHoverRadius: 0,
