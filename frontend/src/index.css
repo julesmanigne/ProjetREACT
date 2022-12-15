@@ -2,7 +2,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
-.canvas-container {
-  height: 35vh;
-  width: 100%;
+
+.crypto-container {
+  padding: 20px;
+}
+
+.crytpo-btc {
+  float: left;
+  padding: 40px;
+  width: 50%;
+  height: 40vh;
+  margin-bottom: 15px;
+}
+.crytpo-eth {
+  float: left;
+  padding: 40px;
+  width: 50%;
+  height: 40vh;
+}
+
+.resetZoomEth,
+.refreshEth {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2rem;
+  font-weight: 900;
+  background: rgb(95, 122, 227);
+  padding: 8px 12px 9px;
+  font-family: "Ubuntu";
+  font-size: 13px;
+  border-radius: 25px;
+  color: #fff;
+  height: 36px;
+  transition: all 75ms ease-in-out;
+}
+.refreshEth {
+  margin-left: 430px;
+}
+.resetZoomEth:hover,
+.refreshEth:hover {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.resetZoomBtc,
+.refreshBtc {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2rem;
+  font-weight: 900;
+  background: rgb(247, 164, 99);
+  padding: 8px 12px 9px;
+  font-size: 13px;
+  font-family: "Ubuntu";
+  border-radius: 25px;
+  color: #fff;
+  height: 36px;
+  transition: all 75ms ease-in-out;
+}
+
+.refreshBtc {
+  margin-left: 440px;
+}
+.resetZoomBtc:hover,
+.refreshBtc:hover {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
 }
