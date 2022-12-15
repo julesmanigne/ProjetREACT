@@ -39,13 +39,6 @@ const App = () => {
           </Toolbar>
         </AppBar>
       </ThemeProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/alarms/add" exact element={AddAlarm} />
-          <Route path="/alarms/delete" exact element={DeleteAlarm} />
-          <Route path="/alarms/update" exact element={ModifyAlarm} />
-        </Routes>
-      </BrowserRouter>
       <main>
         <Container maxWidth="xxl">
           <Box sx={{ bgcolor: '#e6e6e6', height: '100%', padding: 5, margin: 5 }}>

@@ -15,6 +15,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import AddAlarm from '../pages/AddAlarm';
 import Collapsible from '../pages/Collapsible';
+import Collapsible2 from '../pages/Collapsible2';
 import ModifyAlarm from '../pages/ModifyAlarm';
 import TextField from '@mui/material/TextField';
 import '../App.css';
@@ -45,9 +46,22 @@ export default function WidgetAlarm() {
       const payload = {
         "label": name,
         "time": value,
-        "state": true
+        "status": true
       }
       const { data } = await axios.post(`/alarms/alarm`, payload);
+    }
+  };
+
+  const updateHandler = async (id) => {
+    if (window.confirm("Update?")) {
+      const payload = {
+        "label": name,
+        "time": value,
+        "status": true
+      }
+      console.log(id)
+      console.log(value, name)
+      const { data } = await axios.put(`/alarms/alarm/${id}`, payload);
     }
   };
   const handleSubmit = (e) => {
@@ -107,11 +121,27 @@ export default function WidgetAlarm() {
                     <h4>{d2}</h4>
                   </Grid>
                   <Grid item xs={2} md={4}>
-                    {data.state ? "ON" : "OFF"}
+                    {data.status ? "ON" : "OFF"}
                   </Grid>
                   <Grid item xs={6} md={4}>
                     <Button variant="outlined" size="small" style={{ marginRight: 10 }} onClick={() => deleteHandler(alarms.data[id]._id)}>  <DeleteForeverIcon /></Button>
-                    <Button href={`/alarm/${alarms.data[id]._id}`} variant="outlined" size="small"><EditIcon /></Button>
+                    <Collapsible2 label="Edit" >
+                      <form onSubmit={handleSubmit}>
+                        <TextField onChange={(e) => setName(e.target.value)} id="outlined-basic" label="Name" variant="outlined" size="small" style={{ width: '100%', marginBottom: 30 }} />
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                          <DateTimePicker
+                            style={{ width: '100%', height: 40 }}
+                            renderInput={(props) => <TextField {...props} />}
+                            label="Time and Date of alarm"
+                            value={value}
+                            onChange={(newValue) => {
+                              setValue(newValue);
+                            }}
+                          />
+                        </LocalizationProvider>
+                        <Button type="submit" style={{ width: '100%', height: 40 }} size="small" onClick={() => updateHandler(data._id)}><AddCircleIcon /></Button>
+                      </form>
+                    </Collapsible2>
                   </Grid>
 
 
