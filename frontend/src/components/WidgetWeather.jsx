@@ -5,22 +5,27 @@ import "../index.css";
 import Card from "@mui/material/Card";
 
 export default function WidgetWeather() {
-  const [data, setData] = useState({});
-  const [location, setLocation] = useState("");
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a`;
+  const [data, setData] = useState({})
+  const [location, setLocation] = useState('')
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a`
 
   const searchLocation = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       axios.get(url).then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      });
-      setLocation("");
+        setData(response.data)
+        console.log(response.data)
+      })
+      setLocation('')
     }
-  };
+  }
   return (
-    <Card sx={{ height: "100%" }}>
+
+
+    <Card sx={{ height: '100%' }}>
+
+
       <div className="app">
         <div className="search">
           <input

@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://127.0.0.1:3001",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -9,6 +10,7 @@
     "@mui/lab": "^5.0.0-alpha.111",
     "@mui/material": "^5.10.17",
     "axios": "^1.2.1",
+    "cors": "^2.8.5",
     "chart.js": "^4.0.1",
     "chartjs-plugin-zoom": "^2.0.0",
     "install": "^0.13.0",
