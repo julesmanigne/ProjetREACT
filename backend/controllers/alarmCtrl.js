@@ -58,7 +58,7 @@ updateAlarm = async (req, res) => {
                 message: 'Alarm not found!',
             })
         }
-        alarm.name = body.name
+        alarm.label = body.label
         alarm.time = body.time
         alarm.status = body.status
         alarm

@@ -55,6 +55,19 @@ export default function WidgetAlarm() {
     }
   };
 
+  const updateHandler = async (id) => {
+    if (window.confirm("Update?")) {
+      const payload = {
+        label: name,
+        time: value,
+        status: true,
+      };
+      console.log(id);
+      console.log(value, name);
+      const { data } = await axios.put(`/alarms/alarm/${id}`, payload);
+    }
+  };
+
   const fetchAlarms = async () => {
     const { data } = await axios.get("/alarms");
 

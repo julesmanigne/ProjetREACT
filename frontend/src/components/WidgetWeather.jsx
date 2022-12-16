@@ -9,7 +9,7 @@ export default function WidgetWeather() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a`
+  const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -43,7 +43,7 @@ export default function WidgetWeather() {
             </div>
             <div className="temp">
               <h1>
-                {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+                {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
               </h1>
             </div>
             <div className="descriptions">
