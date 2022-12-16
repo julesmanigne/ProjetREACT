@@ -7,22 +7,18 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
-import { Grid, Link, List } from "@mui/material";
+import { Grid, List } from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
-import AddAlarm from "../pages/AddAlarm";
 import Collapsible from "../pages/Collapsible";
-import ModifyAlarm from "../pages/ModifyAlarm";
 import TextField from "@mui/material/TextField";
 import "../App.css";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
-import { FormControl } from "@mui/material";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -40,9 +36,9 @@ export default function WidgetAlarm() {
   const createHandler = async (id) => {
     if (window.confirm("Add?")) {
       const payload = {
-        label: name,
-        time: value,
-        state: true,
+        "label": name,
+        "time": value,
+        "state": true,
       };
       const { data } = await axios.post(`/alarms/alarm`, payload);
     }
@@ -58,9 +54,9 @@ export default function WidgetAlarm() {
   const updateHandler = async (id) => {
     if (window.confirm("Update?")) {
       const payload = {
-        label: name,
-        time: value,
-        status: true,
+        "label": name,
+        "time": value,
+        "status": true,
       };
       console.log(id);
       console.log(value, name);
