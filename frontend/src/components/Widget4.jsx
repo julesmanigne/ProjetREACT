@@ -80,7 +80,11 @@ export default function Widget4() {
     },
   ];
   return (
-    <Card sx={{ height: "100%", borderRadius: "20px" }}>
+    <Card sx={{
+      height: "100%", borderRadius: "20px", maxHeight: "400px",
+      maxWidth: "700px",
+      display: 'flex',
+    }}>
       <CardMedia />
       <CardContent>
         <Typography variant="h5" component="div" fontFamily="Ubuntu">

@@ -6,7 +6,6 @@
 .app {
   max-width: 400px;
   margin: auto;
-  padding: 1rem;
   text-align: center;
 }
 
@@ -78,4 +77,9 @@
 
 .app .length {
   margin: 1rem 0;
+}
+
+.css-ond3k6-MuiPaper-root-MuiCard-root{
+  background-color: rgba(234, 227, 227, 0.2);
+  height: 10000;
 }

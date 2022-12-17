@@ -25,14 +25,12 @@ export default function WidgetWeather() {
     <Card sx={{
       height: '100%', borderRadius: "25px", maxHeight: "400px",
       maxWidth: "400px",
-      display: "flex",
-      flexDirection: "column",
-      height: 700,
-
+      display: 'flex',
     }}>
       <div className="app">
         <div className="search">
           <input
+            style={{ padding: 5, marginTop: 40 }}
             value={location}
             onChange={(event) => setLocation(event.target.value)}
             onKeyPress={searchLocation}
