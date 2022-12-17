@@ -78,7 +78,14 @@ export default function WidgetAlarm() {
 
   return (
     <>
-      <Card sx={{ height: "100%", borderRadius: "25px" }}>
+      <Card sx={{
+        height: "100%", borderRadius: "25px", maxHeight: "400px",
+        display: "flex",
+        flexDirection: "column",
+        height: 700,
+        overflow: "hidden",
+        overflowY: "scroll",
+      }}>
         <CardMedia />
         <CardContent>
           <Typography variant="h5" component="div">
