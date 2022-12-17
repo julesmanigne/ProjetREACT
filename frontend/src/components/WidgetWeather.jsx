@@ -32,7 +32,7 @@ export default function WidgetWeather() {
             value={location}
             onChange={(event) => setLocation(event.target.value)}
             onKeyPress={searchLocation}
-            placeholder="Enter Location"
+            placeholder="Location"
             type="text"
           />
         </div>
@@ -55,21 +55,21 @@ export default function WidgetWeather() {
             <div className="bottom">
               <div className="feels">
                 {data.main ? (
-                  <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+                  <p className="bold">{data.main.feels_like.toFixed()}°C</p>
                 ) : null}
-                <p>Feels</p>
+                <p>Ressentie</p>
               </div>
               <div className="humidity">
                 {data.main ? (
                   <p className="bold">{data.main.humidity}%</p>
                 ) : null}
-                <p> Humidity</p>
+                <p>Humidité</p>
               </div>
               <div className="wind">
                 {data.wind ? (
                   <p className="bold">{data.wind.speed.toFixed()} MPH</p>
                 ) : null}
-                <p> Wind</p>
+                <p> Vent</p>
               </div>
             </div>
           )}
