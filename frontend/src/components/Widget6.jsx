@@ -70,7 +70,7 @@ export default function Widget6() {
   useEffect(() => {
     fechtData();
   }, []);
-``
+
   const resetZoomBtc = () => {
     chartRefBtc.current.resetZoom();
   };
