@@ -39,7 +39,7 @@ export default function Widget4() {
     cutout: 92,
     radius: 95,
     borderRadius: 5,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
         display: false,
@@ -58,11 +58,11 @@ export default function Widget4() {
           Number(Housing),
         ],
         backgroundColor: [
-          "rgb(0, 77, 228)",
-          "rgb(111, 104, 206)",
-          "rgb(249, 219, 108)",
-          "rgb(132, 220, 198)",
-          "rgb(172, 215, 236)",
+          "rgba(0, 77, 228, 0.6)",
+          "rgba(111, 104, 206, 0.6)",
+          "rgba(249, 219, 108, 0.6)",
+          "rgba(132, 220, 198, 0.6)",
+          "rgba(172, 215, 236, 0.6)",
         ],
         hoverOffset: 5,
       },
@@ -90,16 +90,25 @@ export default function Widget4() {
   ];
   return (
     <Card sx={{
-      height: "100%", borderRadius: "20px", maxHeight: "400px",
-      maxWidth: "700px",
-      display: 'flex',
+      height: "100%", borderRadius: "20px",
+      marginLeft: "auto",
+      backgroundColor: "#EDF6F9"
     }}>
       <CardMedia />
+      <ListItemText
+        sx={{ display: 'flex', justifyContent: 'center' }}
+        primary="Spending Plan"
+        primaryTypographyProps={{
+          fontFamily: "Ubuntu",
+          fontSize: 40,
+          fontWeight: 400,
+          letterSpacing: 4,
+        }}
+      >
+        {" "}
+      </ListItemText>
       <CardContent>
-        <Typography variant="h5" component="div" fontFamily="Ubuntu">
-          Spending plan
-        </Typography>
-        <div>
+        <div class="center2">
           <Typography
             variant="h7"
             component="div"
@@ -108,6 +117,8 @@ export default function Widget4() {
           >
             Income : {"£ " + income.toLocaleString()}
           </Typography>
+        </div>
+        <div class="center2">
           <Typography
             variant="h7"
             component="div"
@@ -122,7 +133,9 @@ export default function Widget4() {
         </div>
         <div className="data">
           <Box
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            sx={{
+              display: "flex", justifyContent: "flex-end"
+            }}
           >
             <nav aria-label="main mailbox folders">
               <List>
@@ -186,6 +199,6 @@ export default function Widget4() {
           </Box>
         </div>
       </CardContent>
-    </Card>
+    </Card >
   );
 }

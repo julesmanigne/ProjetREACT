@@ -1,6 +1,6 @@
 import Card from "@mui/material/Card";
-import "../index2.css";
-
+import "../index.css";
+import ListItemText from "@mui/material/ListItemText";
 import React, { useState } from "react";
 import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 
@@ -66,15 +66,41 @@ function App() {
     <Card sx={{
       height: '100%', borderRadius: "25px", maxHeight: "400px",
       maxWidth: "400px",
+      fontFamily: "Ubuntu",
       display: "flex",
-      flexDirection: "row",
+      flexDirection: "column",
       height: 700,
       overflow: "hidden",
       overflowY: "scroll",
+      marginLeft: "auto",
+      backgroundColor: "#EDF6F9",
+      "&::-webkit-scrollbar": {
+        width: 7
+      },
+      "&::-webkit-scrollbar-track": {
+        boxShadow: `inset 0 0 6px rgba(0, 0, 0, 0.3)`,
+      },
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "darkgrey",
+        borderRadius: 5,
+        outline: `1px solid slategrey`,
+      }
     }}>
+
       <div className="app">
         <div className="container">
-          <h1> To do List</h1>
+          <ListItemText
+            sx={{ display: 'flex', justifyContent: 'center' }}
+            primary="To Do List"
+            primaryTypographyProps={{
+              fontFamily: "Ubuntu",
+              fontSize: 40,
+              fontWeight: 400,
+              letterSpacing: 4,
+            }}
+          >
+            {" "}
+          </ListItemText>
 
           <div className="date">
             <p>{days[date.getDay()]}</p>
@@ -89,7 +115,7 @@ function App() {
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ajouter une tâche"
+                placeholder="Add Tasks"
                 type="text"
               />
             </div>
@@ -98,7 +124,7 @@ function App() {
           <div>
             {tasks.map((task) => (
               <div
-                className={`task-row ${task.completed ? "completed" : ""}`}
+                className={`task-row ${task.completed ? "Completed" : ""}`}
                 key={task.id}
                 onDoubleClick={() => toggleComplete(task.id)}
               >
@@ -112,7 +138,7 @@ function App() {
           </div>
 
           <p className="length">
-            {tasks < 1 ? "Aucune tâche" : `Tâche: ${tasks.length}`}
+            {tasks < 1 ? "No Tasks" : `Tasks: ${tasks.length}`}
           </p>
         </div>
       </div>

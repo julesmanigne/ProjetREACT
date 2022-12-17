@@ -13,3 +13,98 @@
 .content-show {
     height: 200px;
 }
+.AlarmButton{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .2s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 80px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px 14px 18px;
+    color: #fff;
+    background-color: rgb(95, 122, 227);
+    height: 48px;
+    transition: all 75ms ease-in-out;
+
+}
+
+.AlarmButton:hover{
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.AlarmButton2{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .2s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 80px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 26px;
+    color: #fff;
+    background-color: rgb(95, 122, 227);
+    height: 48px;
+    transition: all 75ms ease-in-out;
+}
+
+.AlarmButton2:hover{
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.buttonPhoto{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    margin-left: 1%;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .2s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 80px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 1px 30px;
+    color: #fff;
+    background-color: rgb(95, 122, 227);
+    height: 48px;
+}
+.buttonPhoto:hover{
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+.center2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import ListItemText from "@mui/material/ListItemText";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
 import zoomPlugin from "chartjs-plugin-zoom";
@@ -330,7 +331,19 @@ export default function Widget6() {
   };
 
   return (
-    <Card sx={{ height: "100%", width: "100%", borderRadius: "20px" }}>
+    <Card sx={{ height: "100%", width: "100%", borderRadius: "20px", backgroundColor: "#EDF6F9" }}>
+      <ListItemText
+        sx={{ display: 'flex', justifyContent: 'center' }}
+        primary="Crypto"
+        primaryTypographyProps={{
+          fontFamily: "Ubuntu",
+          fontSize: 40,
+          fontWeight: 400,
+          letterSpacing: 4,
+        }}
+      >
+        {" "}
+      </ListItemText>
       <CardContent>
         <div className="crytpo-container">
           <div className="crytpo-btc">

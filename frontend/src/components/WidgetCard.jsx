@@ -3,12 +3,14 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-
 import Image1 from '../images/1.jpg';
 import Image2 from '../images/2.jpg';
 import Image3 from '../images/3.jpg';
-
+import { Grid } from "@mui/material";
+import ListItemText from "@mui/material/ListItemText";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import "../App.css";
 
 function WidgetCard() {
   const [photos, setPhotos] = useState([
@@ -28,18 +30,30 @@ function WidgetCard() {
   }
 
   return (
-    <Card sx={{ height: "100%", borderRadius: "25px" }}>
+    <Card sx={{ height: "100%", borderRadius: "25px", backgroundColor: "#EDF6F9", fontFamily: "Ubuntu", }}>
       <CardMedia />
       <CardContent>
+        <ListItemText
+          style={{ display: 'flex', justifyContent: 'center' }}
+          primary="Memories"
+          primaryTypographyProps={{
+            fontFamily: "Ubuntu",
+            fontSize: 40,
+            fontWeight: 400,
+            letterSpacing: 4,
+          }}
+        >
+          {" "}
+        </ListItemText>
         <div className="photo-album-widget">
           <img src={photos[currentPhoto].src} class="imageCaroussel" alt={photos[currentPhoto].caption} />
         </div>
+        <div class="center">
+          <button className="buttonPhoto" onClick={handlePrevClick}><ArrowBackIosIcon></ArrowBackIosIcon></button>
+          <button className="buttonPhoto" onClick={handleNextClick}><ArrowForwardIosIcon></ArrowForwardIosIcon></button>
+        </div >
       </CardContent>
-      <CardActions>
-        <Button onClick={handlePrevClick}>Prev</Button>
-        <Button onClick={handleNextClick}>Next</Button>
-      </CardActions>
-    </Card>
+    </Card >
   );
 }
 export default WidgetCard;

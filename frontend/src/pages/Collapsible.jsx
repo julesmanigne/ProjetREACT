@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef, useState } from "react";
-import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+
 import '../App.css';
 
 const Collapsible = (props) => {
@@ -15,10 +16,13 @@ const Collapsible = (props) => {
     return (
 
         <div>
-            <Button variant="contained" onClick={toggle} style={{ marginBottom: 6, width: '100%', height: 40 }}>{props.label}</Button>
-            <div className='content-parent' ref={contentRef} style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
-                <div className='content'> {props.children}</div>
-            </div>
+            <Box textAlign='center'>
+
+                <button onClick={toggle} style={{ marginBottom: 6, width: '30%', height: 40, }} className="AlarmButton">{props.label}</button>
+                <div className='content-parent' ref={contentRef} style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
+                    <div className='content'> {props.children}</div>
+                </div>
+            </Box>
         </div>
     )
 }

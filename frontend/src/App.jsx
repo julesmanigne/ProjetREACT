@@ -10,7 +10,6 @@ import WidgetWeather from './components/WidgetWeather';
 import Widget4 from './components/Widget4';
 import Widget5 from './components/Widget5';
 import Widget6 from './components/Widget6';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddAlarm from './pages/AddAlarm';
 import DeleteAlarm from './pages/Collapsible';
 import ModifyAlarm from './pages/ModifyAlarm';
@@ -22,7 +21,7 @@ const darkTheme = createTheme({
   palette: {
     mode: 'light',
     background: {
-      default: "#e6e6e6"
+      default: "#1D3461"
     }
   },
 });
@@ -44,7 +43,7 @@ const App = () => {
       </ThemeProvider>
       <main>
         <Container maxWidth="xxl">
-          <Box sx={{ bgcolor: '#e6e6e6', height: '100%', padding: 2, }}>
+          <Box sx={{ bgcolor: '#1D3461', height: '100%', padding: 2, }}>
             <Box sx={{
               flexDirection: 'row', flexWrap: 'wrap', display: 'flex',
               justifyContent: 'space-around',

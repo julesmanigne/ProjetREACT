@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
 .donut {
   height: 25vh;
   width: 25vh;
@@ -19,12 +23,12 @@
 }
 
 .app {
-  width: 100%;
-  height: 100%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color:#EDF6F9;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  max-width: 400px;
 
-  color: #fff;
 }
 
 .app .search {
@@ -36,30 +40,25 @@
   padding: 0.7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.1);
-  color: #f8f8f8;
+  border: 1px solid rgb(0, 0, 0);
+  background:#badfebd1;
+  color: rgb(0, 0, 0);
 }
 
 .app .temp {
   padding: 0.3rem 1rem;
   font-size: 0.5rem;
-  color: #f8f8f8;
+  color: rgb(0, 0, 0);
 }
 
 ::placeholder {
-  color: #f8f8f8;
+  color: rgb(0, 0, 0);
 }
 
-.css-ond3k6-MuiPaper-root-MuiCard-root {
-  background-color: rgba(234, 227, 227, 0.2);
-  height: 10000;
-}
 .container {
   max-width: 300px;
   margin: auto;
   padding: 0.1rem;
-  position: relative;
   top: 10%;
   display: flex;
   flex-direction: column;
@@ -77,6 +76,78 @@
   transform: rotate(269deg);
 }
 
+.app .date {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+}
+.app .date p {
+  padding: 0 2px;
+}
+
+.app .form-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.app .form-input .icon {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  font-size: 25px;
+  color: rgb(95, 122, 227);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.app form input {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px 10px 5px 50px;
+  font-size: 18px;
+  line-height: 30px;
+  outline: 0;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.app .task-row {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 8px 0;
+  width: 94%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app .task-row .icon {
+  font-size: 25px;
+  color: rgb(95, 122, 227);
+}
+
+.app .task-row p {
+  text-transform: capitalize;
+}
+
+.completed {
+  background-color: #eee;
+  text-decoration: line-through;
+}
+
+.app .length {
+  margin: 1rem 0;
+}
+
 .app .bottom {
   display: flex;
   justify-content: space-evenly;
@@ -87,7 +158,7 @@
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 12px;
-  background-color: rgba(234, 227, 227, 0.2);
+  background-color: #badfebd1;
 }
 
 .bold {
@@ -95,8 +166,9 @@
 }
 
 .donut {
-  margin-top: 30px;
-  margin-right: 350px;
+  margin-top: auto;
+  margin-right: auto;
+  float:left;
 }
 .crypto-container {
   padding: 20px;
