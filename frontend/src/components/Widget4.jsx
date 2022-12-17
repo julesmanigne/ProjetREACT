@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -11,13 +10,14 @@ import { faker } from "@faker-js/faker";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Widget4() {
-  const Savings = faker.commerce.price(100, 350, 0);
-  const Transportation = faker.commerce.price(100, 300, 0);
-  const Debt = faker.commerce.price(175, 400, 0);
-  const Life = faker.commerce.price(300, 600, 0);
-  const Housing = faker.commerce.price(300, 800, 0);
+  const Savings = faker.commerce.price(2000, 3000, 0);
+  const Transportation = faker.commerce.price(1000, 1200, 0);
+  const Debt = faker.commerce.price(3500, 3700, 0);
+  const Life = faker.commerce.price(2500, 3000, 0);
+  const Housing = faker.commerce.price(5000, 7000, 0);
 
-  const income = faker.commerce.price(2050, 3500, 0);
+  const income_1 = faker.commerce.price(25000, 45000, 0);
+  const income = Number(income_1);
   const spendings =
     Number(Savings) +
     Number(Transportation) +
@@ -25,38 +25,24 @@ export default function Widget4() {
     Number(Life) +
     Number(Housing);
 
-  const getData = () => {
-    console.log(Savings);
-    console.log(Transportation);
-    console.log(Debt);
-    console.log(Life);
-    console.log(Housing);
-
-    console.log(income);
-  };
   const options = {
     type: "doughnut",
     responsive: true,
-    cutout: 50,
-    radius: 100,
+    cutout: 90,
+    radius: 95,
     borderRadius: 5,
     maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false,
       },
-      datalabels: {
-        formatter: (value) => {
-          return value + "%";
-        },
-      },
     },
   };
   const data = {
-    labels: ["Savings", "Transportation", "Debt", "Life", "Housing"],
+    labels: ["", "", "", "", ""],
     datasets: [
       {
-        data: [Savings, Transportation, Debt, Life, Housing],
+        data: [Number(Savings), Transportation, Debt, Life, Housing],
         backgroundColor: [
           "rgb(0, 77, 228)",
           "rgb(111, 104, 206)",
@@ -64,7 +50,7 @@ export default function Widget4() {
           "rgb(132, 220, 198)",
           "rgb(172, 215, 236)",
         ],
-        hoverOffset: 4,
+        hoverOffset: 5,
       },
     ],
   };
@@ -72,17 +58,18 @@ export default function Widget4() {
   const plugins = [
     {
       beforeDraw: function (chart) {
-        var width = chart.width,
-          height = chart.height,
-          ctx = chart.ctx;
-        ctx.restore();
-        ctx.font = "18px Ubuntu";
-        ctx.textBaseline = "top";
-        var text = "$ " + spendings,
-          textX = Math.round((width - ctx.measureText(text).width) / 2),
-          textY = height / 2;
-        ctx.fillText(text, textX, textY);
-        ctx.save();
+        const { ctx } = chart;
+
+        ctx.font = "14px Ubuntu";
+        const text = "£" + spendings.toLocaleString();
+        ctx.textAlign = "center";
+        ctx.textBaseLine = "middle";
+
+        const x = chart.getDatasetMeta(0).data[0].x;
+        const y = chart.getDatasetMeta(0).data[0].y;
+
+        ctx.fillText(text, x, y);
+        //ctx.fillRect(x, y, 6, 6);
       },
     },
   ];
@@ -93,7 +80,24 @@ export default function Widget4() {
         <Typography variant="h5" component="div" fontFamily="Ubuntu">
           Spending plan
         </Typography>
-        <div></div>
+        <div>
+          <Typography
+            variant="h7"
+            component="div"
+            fontFamily="Ubuntu"
+            color="grey"
+          >
+            Income : {"£ " + income.toLocaleString()}
+          </Typography>
+          <Typography
+            variant="h7"
+            component="div"
+            fontFamily="Ubuntu"
+            color="grey"
+          >
+            Spending : {"£ " + spendings.toLocaleString()}
+          </Typography>
+        </div>
         <div className="donut">
           <Doughnut data={data} options={options} plugins={plugins} />
         </div>
