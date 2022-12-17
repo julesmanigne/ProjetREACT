@@ -59,7 +59,7 @@ export default function Widget4() {
         backgroundColor: [
           "rgb(0, 77, 228)",
           "rgb(111, 104, 206)",
-          "rgb(215, 219, 229)",
+          "rgb(249, 219, 108)",
           "rgb(132, 220, 198)",
           "rgb(172, 215, 236)",
         ],
