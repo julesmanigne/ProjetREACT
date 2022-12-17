@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import axios from "axios";
-import { Chart } from "chart.js";
 import { Line } from "react-chartjs-2";
 import zoomPlugin from "chartjs-plugin-zoom";
 import {
@@ -70,7 +68,7 @@ export default function Widget6() {
   useEffect(() => {
     fechtData();
   }, []);
-``
+
   const resetZoomBtc = () => {
     chartRefBtc.current.resetZoom();
   };
@@ -332,7 +330,7 @@ export default function Widget6() {
   };
 
   return (
-    <Card sx={{ height: "100%", width: "100%", borderRadius: "25px" }}>
+    <Card sx={{ height: "100%", width: "100%", borderRadius: "20px" }}>
       <CardContent>
         <div className="crytpo-container">
           <div className="crytpo-btc">

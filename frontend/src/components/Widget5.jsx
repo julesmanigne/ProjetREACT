@@ -63,7 +63,7 @@ function App() {
   ];
 
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: "100%", borderRadius: "25px" }}>
       <div className="app">
         <div className="container">
           <h1> To do List</h1>

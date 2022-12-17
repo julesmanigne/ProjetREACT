@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
+.donut {
+  margin-top: 30px;
+  margin-right: 350px;
+}
 .crypto-container {
   padding: 20px;
 }
@@ -33,13 +37,18 @@
   padding: 8px 12px 9px;
   font-family: "Ubuntu";
   font-size: 13px;
-  border-radius: 25px;
+  border-radius: 20px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
 }
+
+.resetZoomEth {
+  margin-left: 50px;
+}
+
 .refreshEth {
-  margin-left: 430px;
+  margin-left: 25px;
 }
 .resetZoomEth:hover,
 .refreshEth:hover {
@@ -58,15 +67,20 @@
   padding: 8px 12px 9px;
   font-size: 13px;
   font-family: "Ubuntu";
-  border-radius: 25px;
+  border-radius: 20px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
 }
 
-.refreshBtc {
-  margin-left: 440px;
+.resetZoomBtc {
+  margin-left: 50px;
 }
+
+.refreshBtc {
+  margin-left: 25px;
+}
+
 .resetZoomBtc:hover,
 .refreshBtc:hover {
   box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
