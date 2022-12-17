@@ -51,7 +51,7 @@
   color: #f8f8f8;
 }
 
-.css-ond3k6-MuiPaper-root-MuiCard-root{
+.css-ond3k6-MuiPaper-root-MuiCard-root {
   background-color: rgba(234, 227, 227, 0.2);
   height: 10000;
 }
@@ -100,6 +100,7 @@
 }
 .crypto-container {
   padding: 20px;
+  overflow: hidden;
 }
 
 .crytpo-btc {
@@ -177,18 +178,15 @@
   box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
 }
 
-.imageCaroussel
-{
+.imageCaroussel {
   height: 100%;
   width: 100%;
   border-radius: 25px;
-  max-height:400px;
-  max-width:700px;
- 
+  max-height: 400px;
+  max-width: 700px;
 }
 
-.photo-album-widget
-{
+.photo-album-widget {
   display: flex;
   justify-content: center;
 }

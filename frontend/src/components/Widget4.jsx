@@ -7,6 +7,14 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import CircleIcon from "@mui/icons-material/Circle";
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Widget4() {
@@ -39,7 +47,7 @@ export default function Widget4() {
     },
   };
   const data = {
-    labels: ["", "", "", "", ""],
+    labels: ["Savings", "Transportation", "Debt", "Life", "Housing"],
     datasets: [
       {
         data: [
@@ -68,6 +76,7 @@ export default function Widget4() {
 
         ctx.font = "18px Ubuntu";
         const text = "£" + spendings.toLocaleString();
+        const text_2 = "Spending";
         ctx.textAlign = "center";
         ctx.textBaseLine = "middle";
 
@@ -75,7 +84,7 @@ export default function Widget4() {
         const y = chart.getDatasetMeta(0).data[0].y;
 
         ctx.fillText(text, x, y);
-        //ctx.fillRect(x, y, 6, 6);
+        ctx.fillText(text_2, x, y + 17);
       },
     },
   ];
@@ -111,7 +120,71 @@ export default function Widget4() {
         <div className="donut">
           <Doughnut data={data} options={options} plugins={plugins} />
         </div>
-        <div className="data"></div>
+        <div className="data">
+          <Box
+            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+          >
+            <nav aria-label="main mailbox folders">
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(0, 77, 228)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Savings" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(111, 104, 206)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Transportation" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(249, 219, 108)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Debt" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(132, 220, 198)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Life" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(172, 215, 236)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Housing" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </nav>
+          </Box>
+        </div>
       </CardContent>
     </Card>
   );
