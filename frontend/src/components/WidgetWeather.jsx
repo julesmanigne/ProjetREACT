@@ -23,7 +23,7 @@ export default function WidgetWeather() {
   return (
 
 
-    <Card sx={{ height: '100%' }}>
+    <Card sx={{ height: '100%', borderRadius: "25px" }}>
 
 
       <div className="app">
