@@ -51,9 +51,12 @@
   color: #f8f8f8;
 }
 
+.css-ond3k6-MuiPaper-root-MuiCard-root{
+  background-color: rgba(234, 227, 227, 0.2);
+  height: 10000;
+}
 .container {
   max-width: 300px;
-  height: 300px;
   margin: auto;
   padding: 0.1rem;
   position: relative;
@@ -79,6 +82,8 @@
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
+  width: 100%;
+
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 12px;

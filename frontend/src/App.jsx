@@ -20,7 +20,10 @@ export { AddAlarm, DeleteAlarm, ModifyAlarm }
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
+    background: {
+      default: "#e6e6e6"
+    }
   },
 });
 
@@ -31,7 +34,7 @@ const App = () => {
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <AppBar position="relative">
-          <Toolbar>
+          <Toolbar style={{ background: '#2E3B55' }}>
             <DashboardIcon />
             <Typography variant='h6'>
               Widget Dashboard
@@ -42,8 +45,8 @@ const App = () => {
       <main>
         <Container maxWidth="xxl">
           <Box sx={{ bgcolor: '#e6e6e6', height: '100%', padding: 5, margin: 5 }}>
-            <Box sx={{ flexGrow: 1 }}>
-              <Grid container spacing={5} columns={16}>
+            <Box sx={{ flexDirection: 'row', flexGrow: 1, justifyContent: 'space-around' }}>
+              <Grid container spacing={4} columns={16}>
 
                 <Grid item lg={8} md={8}>
 
