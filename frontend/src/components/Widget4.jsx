@@ -28,7 +28,7 @@ export default function Widget4() {
   const options = {
     type: "doughnut",
     responsive: true,
-    cutout: 90,
+    cutout: 92,
     radius: 95,
     borderRadius: 5,
     maintainAspectRatio: false,
@@ -42,7 +42,13 @@ export default function Widget4() {
     labels: ["", "", "", "", ""],
     datasets: [
       {
-        data: [Number(Savings), Transportation, Debt, Life, Housing],
+        data: [
+          Number(Savings),
+          Number(Transportation),
+          Number(Debt),
+          Number(Life),
+          Number(Housing),
+        ],
         backgroundColor: [
           "rgb(0, 77, 228)",
           "rgb(111, 104, 206)",
@@ -60,7 +66,7 @@ export default function Widget4() {
       beforeDraw: function (chart) {
         const { ctx } = chart;
 
-        ctx.font = "14px Ubuntu";
+        ctx.font = "18px Ubuntu";
         const text = "£" + spendings.toLocaleString();
         ctx.textAlign = "center";
         ctx.textBaseLine = "middle";
@@ -101,6 +107,7 @@ export default function Widget4() {
         <div className="donut">
           <Doughnut data={data} options={options} plugins={plugins} />
         </div>
+        <div className="data"></div>
       </CardContent>
     </Card>
   );
