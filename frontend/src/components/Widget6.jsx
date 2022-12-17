@@ -70,11 +70,7 @@ export default function Widget6() {
   useEffect(() => {
     fechtData();
   }, []);
-
-  const getLabels = () => {
-    console.log(labels); // "YYYY-MM-DD"
-  };
-
+``
   const resetZoomBtc = () => {
     chartRefBtc.current.resetZoom();
   };
