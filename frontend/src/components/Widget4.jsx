@@ -13,9 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
-import InboxIcon from "@mui/icons-material/Inbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
+import CircleIcon from "@mui/icons-material/Circle";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -49,7 +47,7 @@ export default function Widget4() {
     },
   };
   const data = {
-    labels: ["", "", "", "", ""],
+    labels: ["Savings", "Transportation", "Debt", "Life", "Housing"],
     datasets: [
       {
         data: [
@@ -78,6 +76,7 @@ export default function Widget4() {
 
         ctx.font = "18px Ubuntu";
         const text = "£" + spendings.toLocaleString();
+        const text_2 = "Spending";
         ctx.textAlign = "center";
         ctx.textBaseLine = "middle";
 
@@ -85,7 +84,7 @@ export default function Widget4() {
         const y = chart.getDatasetMeta(0).data[0].y;
 
         ctx.fillText(text, x, y);
-        //ctx.fillRect(x, y, 6, 6);
+        ctx.fillText(text_2, x, y + 17);
       },
     },
   ];
@@ -126,17 +125,56 @@ export default function Widget4() {
                 <ListItem disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(0, 77, 228)" }}
+                      />
                     </ListItemIcon>
-                    <ListItemText primary="Inbox" />
+                    <ListItemText primary="Savings" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
-                      <DraftsIcon />
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(111, 104, 206)" }}
+                      />
                     </ListItemIcon>
-                    <ListItemText primary="Drafts" />
+                    <ListItemText primary="Transportation" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(249, 219, 108)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Debt" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(132, 220, 198)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Life" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <CircleIcon
+                        fontSize="small"
+                        style={{ color: "rgb(172, 215, 236)" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Housing" />
                   </ListItemButton>
                 </ListItem>
               </List>
