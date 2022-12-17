@@ -63,7 +63,15 @@ function App() {
   ];
 
   return (
-    <Card sx={{ height: "100%", borderRadius: "25px" }}>
+    <Card sx={{
+      height: '100%', borderRadius: "25px", maxHeight: "400px",
+      maxWidth: "400px",
+      display: "flex",
+      flexDirection: "row",
+      height: 700,
+      overflow: "hidden",
+      overflowY: "scroll",
+    }}>
       <div className="app">
         <div className="container">
           <h1> To do List</h1>

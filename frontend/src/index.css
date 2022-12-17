@@ -40,6 +40,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: #f8f8f8;
 }
+
 .app .temp {
   padding: 0.3rem 1rem;
   font-size: 0.5rem;
@@ -169,4 +170,20 @@
 .resetZoomBtc:hover,
 .refreshBtc:hover {
   box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.imageCaroussel
+{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  max-height:400px;
+  max-width:700px;
+ 
+}
+
+.photo-album-widget
+{
+  display: flex;
+  justify-content: center;
 }

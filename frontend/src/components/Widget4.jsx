@@ -37,8 +37,9 @@ export default function Widget4() {
   const options = {
     type: "doughnut",
     responsive: true,
-    cutout: 55,
-    // borderRadius: 12,
+    cutout: 50,
+    radius: 100,
+    borderRadius: 5,
     maintainAspectRatio: false,
     plugins: {
       legend: {

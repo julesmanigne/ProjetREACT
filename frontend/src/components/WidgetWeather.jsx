@@ -9,7 +9,7 @@ export default function WidgetWeather() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
-  const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -22,10 +22,14 @@ export default function WidgetWeather() {
   }
   return (
 
+    <Card sx={{
+      height: '100%', borderRadius: "25px", maxHeight: "400px",
+      maxWidth: "400px",
+      display: "flex",
+      flexDirection: "column",
+      height: 700,
 
-    <Card sx={{ height: '100%', borderRadius: "25px" }}>
-
-
+    }}>
       <div className="app">
         <div className="search">
           <input
