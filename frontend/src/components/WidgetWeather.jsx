@@ -6,31 +6,33 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 
 export default function WidgetWeather() {
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState("");
 
-  const [data, setData] = useState({})
-  const [location, setLocation] = useState('')
-
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`;
 
   const searchLocation = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       axios.get(url).then((response) => {
-        setData(response.data)
-        console.log(response.data)
-      })
-      setLocation('')
+        setData(response.data);
+        console.log(response.data);
+      });
+      setLocation("");
     }
-  }
+  };
   return (
-
-    <Card sx={{
-      height: '100%', borderRadius: "25px", maxHeight: "500px",
-      maxWidth: "400px",
-      backgroundColor: "#EDF6F9",
-    }}>
+    <Card
+      sx={{
+        height: "100%",
+        borderRadius: "25px",
+        maxHeight: "500px",
+        maxWidth: "400px",
+        backgroundColor: "#EDF6F9",
+      }}
+    >
       <CardContent>
         <ListItemText
-          sx={{ display: 'flex', justifyContent: 'center' }}
+          sx={{ display: "flex", justifyContent: "center" }}
           primary="Weather"
           primaryTypographyProps={{
             fontFamily: "Ubuntu",
@@ -93,6 +95,6 @@ export default function WidgetWeather() {
           </div>
         </div>
       </CardContent>
-    </Card >
+    </Card>
   );
 }

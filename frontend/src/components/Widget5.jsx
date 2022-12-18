@@ -1,96 +1,75 @@
 import Card from "@mui/material/Card";
 import "../index.css";
 import ListItemText from "@mui/material/ListItemText";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 
-function App() {
-  const [tasks, setTasks] = useState([]);
+export default function App() {
   const [input, setInput] = useState("");
+  const [tasks, setTasks] = useState([]);
 
-  // ajouter une tache
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const addTask = {
-      id: Math.floor(Math.random() * 1000),
-      text: input,
-      completed: false,
-    };
-    setTasks([...tasks, addTask]);
-    setInput("");
+  useEffect(() => {
+    if (localStorage.getItem("localTasks")) {
+      const storedList = JSON.parse(localStorage.getItem("localTasks"));
+      setTasks(storedList);
+    }
+  }, []);
+
+  const addTask = (e) => {
+    if (input) {
+      const newTask = {
+        id: new Date().getTime().toString(),
+        title: input,
+      };
+      setTasks([...tasks, newTask]);
+      localStorage.setItem("localTasks", JSON.stringify([...tasks, newTask]));
+      setInput("");
+    }
   };
 
-  // enlever
-  const deleteTask = (id) => {
-    let filteredTasks = [...tasks].filter((tasks) => tasks.id !== id);
-    setTasks(filteredTasks);
-    console.log("task deleted");
+  const handleDelete = (task) => {
+    const deleted = tasks.filter((t) => t.id !== task.id);
+    setTasks(deleted);
+    localStorage.setItem("localTasks", JSON.stringify(deleted));
   };
 
-  // toggle completed task
-  const toggleComplete = (id) => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
+  const handleClear = () => {
+    setTasks([]);
+    localStorage.removeItem("localTasks");
   };
-
-  const date = new Date();
-  // console.log(date)
-  const days = [
-    "Dimanche",
-    "Lundi",
-    "Mardi",
-    "Mercredi",
-    "Jeudi",
-    "Vendredi",
-    "Samedi",
-  ];
-  const months = [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Aout",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre",
-  ];
 
   return (
-    <Card sx={{
-      height: '100%', borderRadius: "25px", maxHeight: "400px",
-      maxWidth: "400px",
-      fontFamily: "Ubuntu",
-      display: "flex",
-      flexDirection: "column",
-      height: 700,
-      overflow: "hidden",
-      overflowY: "scroll",
-      marginLeft: "auto",
-      backgroundColor: "#EDF6F9",
-      "&::-webkit-scrollbar": {
-        width: 7
-      },
-      "&::-webkit-scrollbar-track": {
-        boxShadow: `inset 0 0 6px rgba(0, 0, 0, 0.3)`,
-      },
-      "&::-webkit-scrollbar-thumb": {
-        backgroundColor: "darkgrey",
-        borderRadius: 5,
-        outline: `1px solid slategrey`,
-      }
-    }}>
-
+    <Card
+      sx={{
+        height: "100%",
+        borderRadius: "25px",
+        maxHeight: "400px",
+        maxWidth: "400px",
+        fontFamily: "Ubuntu",
+        display: "flex",
+        flexDirection: "column",
+        height: 700,
+        overflow: "hidden",
+        overflowY: "scroll",
+        marginLeft: "auto",
+        backgroundColor: "#EDF6F9",
+        "&::-webkit-scrollbar": {
+          width: 7,
+        },
+        "&::-webkit-scrollbar-track": {
+          boxShadow: `inset 0 0 6px rgba(0, 0, 0, 0.3)`,
+        },
+        "&::-webkit-scrollbar-thumb": {
+          backgroundColor: "darkgrey",
+          borderRadius: 5,
+          outline: `1px solid slategrey`,
+        },
+      }}
+    >
       <div className="app">
         <div className="container">
           <ListItemText
-            sx={{ display: 'flex', justifyContent: 'center' }}
+            sx={{ display: "flex", justifyContent: "center" }}
             primary="To Do List"
             primaryTypographyProps={{
               fontFamily: "Ubuntu",
@@ -101,49 +80,59 @@ function App() {
           >
             {" "}
           </ListItemText>
-
-          <div className="date">
-            <p>{days[date.getDay()]}</p>
-            <p>{date.getDate()}</p>
-            <p>{months[date.getMonth()]}</p>
-            <p>{date.getFullYear()}</p>
+          <div className="form-input">
+            <input
+              name="task"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder=""
+              type="text"
+            />
           </div>
-
-          <form onSubmit={handleSubmit}>
-            <div className="form-input">
-              <AiOutlinePlus className="icon" />
-              <input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Add Tasks"
-                type="text"
-              />
-            </div>
-          </form>
-
           <div>
-            {tasks.map((task) => (
-              <div
-                className={`task-row ${task.completed ? "Completed" : ""}`}
-                key={task.id}
-                onDoubleClick={() => toggleComplete(task.id)}
-              >
-                <p>{task.text} </p>
-                <AiOutlineClose
-                  onClick={() => deleteTask(task.id)}
-                  className="icon"
-                />
-              </div>
-            ))}
+            <button className="add-task" onClick={addTask}>
+              ADD
+            </button>
+            {!tasks.length ? null : (
+              <button className="clear-task" onClick={() => handleClear()}>
+                Clear
+              </button>
+            )}
           </div>
 
-          <p className="length">
-            {tasks < 1 ? "No Tasks" : `Tasks: ${tasks.length}`}
-          </p>
+          <div className="lengh">
+            You have
+            {!tasks.length
+              ? " no tasks"
+              : tasks.length === 1
+              ? " 1 task"
+              : tasks.length > 1
+              ? ` ${tasks.length} tasks`
+              : null}
+          </div>
+          {tasks.map((task) => (
+            <React.Fragment key={task.id}>
+              <div className="col-11">
+                <span
+                  className="form-control bg-white btn mt-2"
+                  style={{ textAlign: "left", fontWeight: "bold" }}
+                >
+                  {task.title}
+                </span>
+              </div>
+
+              <div className="col-1">
+                <button
+                  className="delete-task"
+                  onClick={() => handleDelete(task)}
+                >
+                  delete
+                </button>
+              </div>
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </Card>
   );
 }
-
-export default App;

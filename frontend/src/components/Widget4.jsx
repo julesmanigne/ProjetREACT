@@ -36,7 +36,7 @@ export default function Widget4() {
   const options = {
     type: "doughnut",
     responsive: true,
-    cutout: 92,
+    cutout: 85,
     radius: 95,
     borderRadius: 5,
     maintainAspectRatio: true,
@@ -89,14 +89,17 @@ export default function Widget4() {
     },
   ];
   return (
-    <Card sx={{
-      height: "100%", borderRadius: "20px",
-      marginLeft: "auto",
-      backgroundColor: "#EDF6F9"
-    }}>
+    <Card
+      sx={{
+        height: "100%",
+        borderRadius: "20px",
+        marginLeft: "auto",
+        backgroundColor: "#EDF6F9",
+      }}
+    >
       <CardMedia />
       <ListItemText
-        sx={{ display: 'flex', justifyContent: 'center' }}
+        sx={{ display: "flex", justifyContent: "center" }}
         primary="Spending Plan"
         primaryTypographyProps={{
           fontFamily: "Ubuntu",
@@ -134,7 +137,8 @@ export default function Widget4() {
         <div className="data">
           <Box
             sx={{
-              display: "flex", justifyContent: "flex-end"
+              display: "flex",
+              justifyContent: "flex-end",
             }}
           >
             <nav aria-label="main mailbox folders">
@@ -199,6 +203,6 @@ export default function Widget4() {
           </Box>
         </div>
       </CardContent>
-    </Card >
+    </Card>
   );
 }

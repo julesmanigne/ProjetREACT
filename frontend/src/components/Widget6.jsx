@@ -331,9 +331,16 @@ export default function Widget6() {
   };
 
   return (
-    <Card sx={{ height: "100%", width: "100%", borderRadius: "20px", backgroundColor: "#EDF6F9" }}>
+    <Card
+      sx={{
+        height: "100%",
+        width: "100%",
+        borderRadius: "20px",
+        backgroundColor: "#EDF6F9",
+      }}
+    >
       <ListItemText
-        sx={{ display: 'flex', justifyContent: 'center' }}
+        sx={{ display: "flex", justifyContent: "center" }}
         primary="Crypto"
         primaryTypographyProps={{
           fontFamily: "Ubuntu",

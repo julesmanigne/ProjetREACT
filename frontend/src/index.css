@@ -24,11 +24,10 @@
 
 .app {
   position: relative;
-  background-color:#EDF6F9;
+  background-color: #edf6f9;
   text-align: center;
   color: rgb(0, 0, 0);
   max-width: 400px;
-
 }
 
 .app .search {
@@ -41,7 +40,7 @@
   font-size: 1.2rem;
   border-radius: 10px;
   border: 1px solid rgb(0, 0, 0);
-  background:#badfebd1;
+  background: #badfebd1;
   color: rgb(0, 0, 0);
 }
 
@@ -130,18 +129,8 @@
   justify-content: space-between;
 }
 
-.app .task-row .icon {
-  font-size: 25px;
-  color: rgb(95, 122, 227);
-}
-
 .app .task-row p {
   text-transform: capitalize;
-}
-
-.completed {
-  background-color: #eee;
-  text-decoration: line-through;
 }
 
 .app .length {
@@ -168,7 +157,7 @@
 .donut {
   margin-top: auto;
   margin-right: auto;
-  float:left;
+  float: left;
 }
 .crypto-container {
   padding: 20px;
@@ -261,4 +250,31 @@
 .photo-album-widget {
   display: flex;
   justify-content: center;
+}
+
+.add-task,
+.delete-task,
+.clear-task {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2rem;
+  font-weight: 900;
+  background: rgb(95, 122, 227);
+  padding: 8px 35px 9px;
+  font-size: 13px;
+  font-family: "Ubuntu";
+  border-radius: 20px;
+  color: #fff;
+  height: 36px;
+  transition: all 75ms ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.add-task:hover,
+.delete-task:hover,
+.clear-task:hover {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
 }
