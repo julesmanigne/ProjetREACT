@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -56,25 +55,30 @@ function WidgetCard() {
         >
           {" "}
         </ListItemText>
-        <Swiper
-          modules={[Autoplay]}
-          slidesPerView={1}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-        >
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-          {createSlide()}
-        </Swiper>
+        <div>
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={1}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+          >
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+            {createSlide()}
+          </Swiper>
+        </div>
       </CardContent>
     </Card>
   );

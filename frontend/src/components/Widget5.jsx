@@ -107,7 +107,7 @@ export default function App() {
                     className="delete-task"
                     onClick={() => handleDelete(task)}
                   >
-                    Delete
+                    delete
                   </button>
                 </div>
               </React.Fragment>
