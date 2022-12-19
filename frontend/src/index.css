@@ -23,10 +23,8 @@
 }
 
 .app {
-  position: relative;
-  background-color: #edf6f9;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(38, 38, 38);
 }
 
 .app .search {
@@ -39,25 +37,26 @@
   font-size: 1.2rem;
   border-radius: 10px;
   border: 1px solid rgb(0, 0, 0);
-  background: #badfebd1;
+  background: #F8FAFB;
   color: rgb(0, 0, 0);
 }
 
 .app .temp {
   padding: 0.3rem 1rem;
   font-size: 0.5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(38, 38, 38);
 }
 
 ::placeholder {
-  color: rgb(0, 0, 0);
+  color: rgb(80, 79, 79);
 }
 
 .todoSearch{
   width: 90%;
+  height: 40px;
 }
 .container {
-  max-width: 300px;
+
   margin: auto;
   padding: 0.1rem;
   top: 10%;
@@ -129,7 +128,7 @@
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 12px;
-  background-color: #badfebd1;
+  background-color: #F8FAFB;
 }
 
 .bold {
@@ -167,7 +166,7 @@
   cursor: pointer;
   line-height: 1.2rem;
   font-weight: 900;
-  background: rgb(95, 122, 227);
+  background: rgb(111,106,248);
   padding: 8px 12px 9px;
   font-family: "Ubuntu";
   font-size: 13px;
@@ -231,7 +230,7 @@
   cursor: pointer;
   line-height: 1.2rem;
   font-weight: 900;
-  background: rgb(95, 122, 227);
+  background: rgb(111,106,248);
   padding: 8px 35px 9px;
   font-size: 13px;
   font-family: "Ubuntu";
@@ -249,7 +248,7 @@
   cursor: pointer;
   line-height: 1.2rem;
   font-weight: 900;
-  background: rgb(95, 122, 227);
+  background: rgb(111,106,248);
 
   font-size: 13px;
   font-family: "Ubuntu";

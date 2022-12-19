@@ -37,7 +37,7 @@ function WidgetCard() {
         height: "100%",
         
         borderRadius: "25px",
-        backgroundColor: "#EDF6F9",
+        backgroundColor: "#fff",
         fontFamily: "Ubuntu",
       }}
     >
@@ -45,7 +45,7 @@ function WidgetCard() {
       <CardContent>
         <div className="centerCard"></div>
         <ListItemText
-          style={{ display: "flex", justifyContent: "center" }}
+          style={{ display: "flex", justifyContent: "center", marginTop:2  }}
           primary="Memories"
           primaryTypographyProps={{
             fontFamily: "Ubuntu",

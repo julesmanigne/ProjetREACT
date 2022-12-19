@@ -36,7 +36,7 @@ export default function WidgetWeather() {
       sx={{
         height: "100%",
         borderRadius: "25px",
-        backgroundColor: "#EDF6F9",
+        backgroundColor: "#fff",
       }}
     >
       <CardContent>
@@ -56,7 +56,7 @@ export default function WidgetWeather() {
         <div className="app">
           <div className="search">
             <input
-              style={{ padding: 10, marginTop: 40, textAlign: "center"}}
+              style={{ padding: 10, marginTop: 40, textAlign: "center", width: "90%"}}
               value={location}
               onChange={(event) => setLocation(event.target.value)}
               onKeyPress={search}

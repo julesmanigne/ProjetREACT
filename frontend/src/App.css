@@ -35,7 +35,7 @@
     text-align: center;
     padding: 14px 14px 18px;
     color: #fff;
-    background-color: rgb(95, 122, 227);
+    background-color: rgb(111,106,248);
     height: 48px;
     transition: all 75ms ease-in-out;
 
@@ -64,7 +64,7 @@
     text-align: center;
     padding: 10px 26px;
     color: #fff;
-    background-color: rgb(95, 122, 227);
+    background-color: rgb(111,106,248);
     height: 48px;
     transition: all 75ms ease-in-out;
 }

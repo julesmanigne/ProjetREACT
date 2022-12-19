@@ -337,11 +337,11 @@ export default function Widget6() {
         width: "100%",
        
         borderRadius: "20px",
-        backgroundColor: "#EDF6F9",
+        backgroundColor: "#fff",
       }}
     >
       <ListItemText
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", marginTop:2  }}
         primary="Crypto"
         primaryTypographyProps={{
           fontFamily: "Ubuntu",

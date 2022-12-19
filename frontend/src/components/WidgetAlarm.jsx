@@ -102,7 +102,7 @@ export default function WidgetAlarm() {
         height: 700,
         overflow: "hidden",
         overflowY: "scroll",
-        backgroundColor: "#EDF6F9",
+        backgroundColor: "#fff",
         "&::-webkit-scrollbar": {
           width: 0
         }
@@ -110,7 +110,7 @@ export default function WidgetAlarm() {
         <CardMedia />
         <CardContent>
           <ListItemText
-            sx={{ display: 'flex', justifyContent: 'center' }}
+            sx={{ display: 'flex', justifyContent: 'center', marginTop:-5 }}
             primary="Alarms"
             primaryTypographyProps={{
               fontFamily: "Ubuntu",

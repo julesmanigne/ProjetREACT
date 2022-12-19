@@ -21,7 +21,7 @@ const darkTheme = createTheme({
   palette: {
     mode: "light",
     background: {
-      default: "#1D3461",
+      default: "#F8FAFB",
     },
   },
 });
@@ -35,7 +35,7 @@ const Home = () => {
       </ThemeProvider>
       <main>
         <Container maxWidth="xxl">
-          <Box sx={{ bgcolor: "#1D3461", height: "100%", padding: 2 }}>
+          <Box sx={{ bgcolor: "#F8FAFB", height: "100%", padding: 2 }}>
             <Box
               sx={{
                 flexDirection: "row",

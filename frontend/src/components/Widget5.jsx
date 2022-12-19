@@ -49,7 +49,6 @@ export default function App() {
         overflow: "hidden",
         overflowY: "scroll",
         marginLeft: "auto",
-        backgroundColor: "#EDF6F9",
         "&::-webkit-scrollbar": {
           width: 0,
         },
@@ -58,8 +57,8 @@ export default function App() {
       <div className="app">
         <div className="container">
           <ListItemText
-            sx={{ display: "flex", justifyContent: "center" }}
-            primary="To Do List"
+            sx={{ display: "flex", justifyContent: "center", marginTop:2 }}
+            primary="To Do"
             primaryTypographyProps={{
               fontFamily: "Ubuntu",
               fontSize: 40,
@@ -71,11 +70,12 @@ export default function App() {
           </ListItemText>
           <div className="form-input">
             <input
+             style={{ padding: 10, marginTop: 42, textAlign: "center", width: "90%"}}
             className="todoSearch"
               name="task"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder=""
+              placeholder="Enter a task"
               type="text"
             />
           </div>

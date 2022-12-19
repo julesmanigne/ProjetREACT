@@ -100,12 +100,12 @@ export default function Widget4() {
         height: "100%",
         borderRadius: "20px",
         marginLeft: "auto",
-        backgroundColor: "#EDF6F9",
+        backgroundColor: "#fff",
       }}
     >
       <CardMedia />
       <ListItemText
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", marginTop:2 }}
         primary="Spending Plan"
         primaryTypographyProps={{
           fontFamily: "Ubuntu",
