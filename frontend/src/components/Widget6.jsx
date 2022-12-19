@@ -357,14 +357,12 @@ export default function Widget6() {
             <button className="resetZoomBtc" onClick={resetZoomBtc}>
               reset zoom
             </button>
-            <button className="refreshBtc">refresh</button>
             <Line ref={chartRefBtc} options={options_btc} data={data_btc} />
           </div>
           <div className="crytpo-eth">
             <button className="resetZoomEth" onClick={resetZoomEth}>
               reset zoom
             </button>
-            <button className="refreshEth">refresh</button>
             <Line ref={chartRefEth} options={options_eth} data={data_eth} />
           </div>
         </div>
