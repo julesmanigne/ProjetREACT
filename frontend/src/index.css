@@ -272,6 +272,12 @@
   align-items: center;
 }
 
+.infoline {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .col-11 {
   word-wrap: break-word;
 }

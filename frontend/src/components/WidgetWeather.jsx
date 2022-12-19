@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../index.css";
 import ListItemText from "@mui/material/ListItemText";
@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 
 export default function WidgetWeather() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [location, setLocation] = useState("");
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`;

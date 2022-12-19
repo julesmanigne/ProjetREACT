@@ -73,17 +73,22 @@ export default function Widget4() {
     {
       beforeDraw: function (chart) {
         const { ctx } = chart;
-
-        ctx.font = "18px Ubuntu";
-        const text = "£" + spendings.toLocaleString();
-        const text_2 = "Spending";
-        ctx.textAlign = "center";
-        ctx.textBaseLine = "middle";
-
         const x = chart.getDatasetMeta(0).data[0].x;
         const y = chart.getDatasetMeta(0).data[0].y;
 
+        const text = "£" + spendings.toLocaleString();
+        ctx.fillStyle = "black"; //<======= here
+        ctx.font = "18px Ubuntu";
+        ctx.textAlign = "center";
+        ctx.textBaseLine = "middle";
+
         ctx.fillText(text, x, y);
+
+        const text_2 = "Spending";
+        ctx.fillStyle = "grey"; //<======= here
+        ctx.font = "18px Ubuntu";
+        ctx.textAlign = "center";
+        ctx.textBaseLine = "middle";
         ctx.fillText(text_2, x, y + 17);
       },
     },
@@ -112,25 +117,41 @@ export default function Widget4() {
         {" "}
       </ListItemText>
       <CardContent>
-        <div iv>
-          <div class="center2">
+        <div className="infoline">
+          <div>
             <Typography
               variant="h7"
               component="div"
               fontFamily="Ubuntu"
               color="grey"
             >
-              Income : {"£ " + income.toLocaleString()}
+              Income
+            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              fontFamily="Ubuntu"
+              color="black"
+            >
+              {" £ " + income.toLocaleString()}
             </Typography>
           </div>
-          <div class="center2">
+          <div>
             <Typography
               variant="h7"
               component="div"
               fontFamily="Ubuntu"
               color="grey"
             >
-              Spending : {"£ " + spendings.toLocaleString()}
+              Spending
+            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              fontFamily="Ubuntu"
+              color="black"
+            >
+              {"£ " + spendings.toLocaleString()}
             </Typography>
           </div>
         </div>

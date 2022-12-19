@@ -2,7 +2,6 @@ import Card from "@mui/material/Card";
 import "../index.css";
 import ListItemText from "@mui/material/ListItemText";
 import React, { useState, useEffect } from "react";
-import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -99,17 +98,6 @@ export default function App() {
               </button>
             )}
           </div>
-
-          {/*        <div className="lengh">
-            You have
-            {!tasks.length
-              ? " no tasks"
-              : tasks.length === 1
-              ? " 1 task"
-              : tasks.length > 1
-              ? ` ${tasks.length} tasks`
-              : null}
-            </div> */}
           <div className="task-container">
             {tasks.map((task) => (
               <React.Fragment key={task.id}>
