@@ -89,7 +89,7 @@ export default function App() {
               type="text"
             />
           </div>
-          <div>
+          <div className="buttonLine">
             <button className="add-task" onClick={addTask}>
               ADD
             </button>
@@ -127,7 +127,7 @@ export default function App() {
                     className="delete-task"
                     onClick={() => handleDelete(task)}
                   >
-                    delete
+                    Delete
                   </button>
                 </div>
               </React.Fragment>

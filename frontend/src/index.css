@@ -233,7 +233,6 @@
 }
 
 .add-task,
-.delete-task,
 .clear-task {
   display: inline-block;
   outline: 0;
@@ -252,9 +251,38 @@
   margin-top: 10px;
   margin-bottom: 5px;
 }
+.delete-task{
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2rem;
+  font-weight: 900;
+  background: rgb(95, 122, 227);
+  
+  font-size: 13px;
+  font-family: "Ubuntu";
+  border-radius: 20px;
+  color: #fff;
+  height: 26px;
+  width: 50px;
+  transition: all 75ms ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
 
 .add-task:hover,
 .delete-task:hover,
 .clear-task:hover {
   box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+}
+
+.buttonLine{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col-11{
+  word-wrap: break-word;
 }
