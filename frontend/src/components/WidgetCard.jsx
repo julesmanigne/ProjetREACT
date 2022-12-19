@@ -33,6 +33,7 @@ function WidgetCard() {
   }
 
   return (
+   
     <Card
       sx={{
         height: "100%",
@@ -43,6 +44,7 @@ function WidgetCard() {
     >
       <CardMedia />
       <CardContent>
+      <div className="centerCard"></div>
         <ListItemText
           style={{ display: "flex", justifyContent: "center" }}
           primary="Memories"
