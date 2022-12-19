@@ -140,9 +140,23 @@ export default function WidgetAlarm() {
                 <div key={id}>
                   <Box sx={{}}>
                     <Grid item xs={18}>
-                      <List sx={{ display: "flex", justifyContent: "center", border: "1px solid rgb(95, 122, 227);", marginBottom: 2, borderRadius: 5, paddingLeft: 5 }}>
+                      
+                      <List sx={{  display: "flex", border: "1px solid rgb(95, 122, 227);", marginBottom: 2, borderRadius: 5, paddingLeft: 0,  }}>
+                       
+                      <Grid item xs={2} sm={4} md={5} sx={{  display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <button
+                              className="AlarmButton2"
+                              variant="outlined"
+                              size="small"
+                              style={{ marginRight: 10}}
+                              onClick={() => deleteHandler(alarms.data[id]._id)}
+                            >
+                              {" "}
+                              <DeleteForeverIcon />
+                            </button>
+                         </Grid>
                         <ListItemText
-                          sx={{}}
+                          sx={{  margin: 'auto' }}
                           primary={data.label}
                           secondary={d2}
                           primaryTypographyProps={{
@@ -154,7 +168,7 @@ export default function WidgetAlarm() {
                         >
                           {" "}
                         </ListItemText>
-                        <Grid sx={{ textAlign: 'center', display: "flex" }} item xs={2} md={12}>
+                        <Grid sx={{ textAlign: 'center', display: "flex" }} item xs={2} md={2}>
                           <ListItemText
                             sx={{ margin: 'auto' }}
                             primary={data.status ? "ON" : "OFF"}
@@ -169,23 +183,13 @@ export default function WidgetAlarm() {
                             {" "}
                           </ListItemText>
                         </Grid>
-                        <Grid item xs={2} sm={4} md={4} sx={{}}>
-                          <button
-                            className="AlarmButton2"
-                            variant="outlined"
-                            size="small"
-                            style={{ marginRight: 10, marginBlock: 5 }}
-                            onClick={() => deleteHandler(alarms.data[id]._id)}
-                          >
-                            {" "}
-                            <DeleteForeverIcon />
-                          </button>
+                        <Grid item xs={2} sm={4} md={5} sx={{  display: "flex", justifyContent: "center", alignItems: "center", margin:'auto'}}></Grid>
                           <Collapsible2 label="Edit" >
                             <form onSubmit={handleSubmit}>
                               <TextField onChange={(e) => setName(e.target.value)} id="outlined-basic" label="Name" variant="outlined" size="small" style={{ width: '100%', marginBottom: 30 }} />
                               <LocalizationProvider dateAdapter={AdapterDayjs}>
                                 <DateTimePicker
-                                  style={{ width: '100%', height: 40 }}
+                                  style={{ width: '100%', height: 40}}
                                   renderInput={(props) => <TextField {...props} />}
                                   label="Time and Date of alarm"
                                   value={value}
@@ -196,17 +200,17 @@ export default function WidgetAlarm() {
                               </LocalizationProvider>
                               <Switch checked={checked} onChange={switchHandler}></Switch>
                               <h3>ON?</h3>
-                              <Button type="submit" style={{ width: '100%', height: 40 }} size="small" onClick={() => updateHandler(data._id)}><AddCircleIcon /></Button>
+                              <Button type="submit" style={{ width: '100%', height: 40}} size="small" onClick={() => updateHandler(data._id)}><AddCircleIcon /></Button>
                             </form>
                           </Collapsible2>
-                        </Grid>
-                      </List>
+                      </List>    
                     </Grid>
-                  </Box>
+                  </Box>  
                 </div>
               );
             })}
           </Typography>
+          
         </CardContent>
         <CardActions>
           <Grid container spacing={1}>
