@@ -100,7 +100,6 @@ export default function Widget4() {
         height: "100%",
         borderRadius: "20px",
         marginLeft: "auto",
-       
         backgroundColor: "#EDF6F9",
       }}
     >

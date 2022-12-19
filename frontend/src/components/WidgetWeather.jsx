@@ -56,7 +56,7 @@ export default function WidgetWeather() {
         <div className="app">
           <div className="search">
             <input
-              style={{ padding: 10, marginTop: 40, textAlign: "center" }}
+              style={{ padding: 10, marginTop: 40, textAlign: "center"}}
               value={location}
               onChange={(event) => setLocation(event.target.value)}
               onKeyPress={search}

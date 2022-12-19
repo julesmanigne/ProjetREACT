@@ -71,6 +71,7 @@ export default function App() {
           </ListItemText>
           <div className="form-input">
             <input
+            className="todoSearch"
               name="task"
               value={input}
               onChange={(e) => setInput(e.target.value)}
