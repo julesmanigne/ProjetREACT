@@ -36,7 +36,6 @@ export default function WidgetWeather() {
       sx={{
         height: "100%",
         borderRadius: "25px",
-        
         backgroundColor: "#EDF6F9",
       }}
     >
