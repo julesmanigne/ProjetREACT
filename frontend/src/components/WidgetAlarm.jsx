@@ -168,7 +168,7 @@ export default function WidgetAlarm() {
                         >
                           {" "}
                         </ListItemText>
-                        <Grid sx={{ textAlign: 'center', display: "flex" }} item xs={2} md={2}>
+                        <Grid sx={{ textAlign: 'center', display: "flex", marginLeft: 5 }} item xs={2} md={2}>
                           <ListItemText
                             sx={{ margin: 'auto' }}
                             primary={data.status ? "ON" : "OFF"}
