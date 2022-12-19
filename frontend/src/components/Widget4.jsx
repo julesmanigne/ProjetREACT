@@ -89,7 +89,7 @@ export default function Widget4() {
         ctx.font = "18px Ubuntu";
         ctx.textAlign = "center";
         ctx.textBaseLine = "middle";
-        ctx.fillText(text_2, x, y + 17);
+        ctx.fillText(text_2, x, y + 22);
       },
     },
   ];
