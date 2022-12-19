@@ -36,8 +36,8 @@
   padding: 0.7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
-  background: #F8FAFB;
+  border: 0 solid rgb(111,106,248);
+  background: #F2F2FD;
   color: rgb(0, 0, 0);
 }
 
@@ -128,7 +128,7 @@
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 12px;
-  background-color: #F8FAFB;
+  background-color: #F2F2FD;
 }
 
 .bold {
