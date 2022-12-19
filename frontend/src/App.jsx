@@ -30,7 +30,12 @@ const App = () => {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <AppBar position="relative"></AppBar>
+        <AppBar position="relative">
+          <Toolbar style={{ background: "#2E3B55" }}>
+            <DashboardIcon />
+            <Typography variant="h6">Widget Dashboard</Typography>
+          </Toolbar>
+        </AppBar>
       </ThemeProvider>
       <main>
         <Container maxWidth="xxl">
