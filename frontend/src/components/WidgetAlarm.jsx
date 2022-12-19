@@ -94,8 +94,7 @@ export default function WidgetAlarm() {
     <>
       <Card sx={{
         height: "100%", borderRadius: "25px", maxHeight: "400px",
-        minHeight: "400px",
-        minWidth: "400px",
+
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",

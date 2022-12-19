@@ -38,8 +38,6 @@ export default function WidgetWeather() {
         borderRadius: "25px",
         maxHeight: "500px",
         maxWidth: "400px",
-        minHeight: "400px",
-        minWidth: "300px",
         backgroundColor: "#EDF6F9",
       }}
     >

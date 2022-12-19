@@ -46,23 +46,23 @@ const Home = () => {
                 m: "auto",
               }}
             >
-              <Grid container spacing={4} columns={16}>
-                <Grid item lg={8} md={8} sm={6} xs={6}>
+              <Grid container spacing={1} columns={12}>
+                <Grid item lg={6} md={6} sm={4} xs={12}>
                   <WidgetCard></WidgetCard>
                 </Grid>
-                <Grid item lg={8} md={4} sm={6} xs={6}>
+                <Grid item lg={6} md={6} sm={4} xs={12}>
                   <WidgetAlarm></WidgetAlarm>
                 </Grid>
-                <Grid item lg={5} md={4} sm={4} xs={4}>
+                <Grid item lg={4} md={4} sm={4} xs={12}>
                   <WidgetWeather></WidgetWeather>
                 </Grid>
-                <Grid item lg={6} md={8} sm={4} xs={4}>
+                <Grid item lg={4} md={4} sm={6} xs={12}>
                   <Widget4></Widget4>
                 </Grid>
-                <Grid item lg={5} md={8}sm={4} xs={4}>
+                <Grid item lg={4} md={4}sm={6} xs={12}>
                   <Widget5></Widget5>
                 </Grid>
-                <Grid item lg={18} md={4}sm={12} xs={12}>
+                <Grid item lg={12} md={12}sm={12} xs={12}>
                   <Widget6></Widget6>
                 </Grid>
               </Grid>

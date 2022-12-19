@@ -335,8 +335,7 @@ export default function Widget6() {
       sx={{
         height: "100%",
         width: "100%",
-        minHeight: "400px",
-        minWidth: "400px",
+       
         borderRadius: "20px",
         backgroundColor: "#EDF6F9",
       }}
