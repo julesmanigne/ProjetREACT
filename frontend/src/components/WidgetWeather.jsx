@@ -7,19 +7,30 @@ import Card from "@mui/material/Card";
 
 export default function WidgetWeather() {
   const [data, setData] = useState([]);
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Paris");
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`;
 
-  const searchLocation = (event) => {
-    if (event.key === "Enter") {
-      axios.get(url).then((response) => {
-        setData(response.data);
-        console.log(response.data);
+  const searchLocation = () => {
+    {
+      axios.get(url).then((res) => {
+        setData(res.data);
       });
       setLocation("");
     }
   };
+
+  const search = (e) => {
+    if (e.key === "Enter") {
+      searchLocation();
+    }
+  };
+
+  useEffect(() => {
+    // search once after first render
+    searchLocation();
+  }, []); // no dependency: execute it once after first render
+
   return (
     <Card
       sx={{
@@ -50,7 +61,7 @@ export default function WidgetWeather() {
               style={{ padding: 10, marginTop: 40, textAlign: "center" }}
               value={location}
               onChange={(event) => setLocation(event.target.value)}
-              onKeyPress={searchLocation}
+              onKeyPress={search}
               placeholder="Location"
               type="text"
             />
@@ -86,7 +97,7 @@ export default function WidgetWeather() {
                 </div>
                 <div className="wind">
                   {data.wind ? (
-                    <p className="bold">{data.wind.speed.toFixed()} MPH</p>
+                    <p className="bold">{data.wind.speed.toFixed()} KPH</p>
                   ) : null}
                   <p> Vent</p>
                 </div>
