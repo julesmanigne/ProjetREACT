@@ -100,7 +100,7 @@ export default function App() {
             )}
           </div>
 
-          <div className="lengh">
+          {/*        <div className="lengh">
             You have
             {!tasks.length
               ? " no tasks"
@@ -109,28 +109,30 @@ export default function App() {
               : tasks.length > 1
               ? ` ${tasks.length} tasks`
               : null}
-          </div>
-          {tasks.map((task) => (
-            <React.Fragment key={task.id}>
-              <div className="col-11">
-                <span
-                  className="form-control bg-white btn mt-2"
-                  style={{ textAlign: "left", fontWeight: "bold" }}
-                >
-                  {task.title}
-                </span>
-              </div>
+            </div> */}
+          <div className="task-container">
+            {tasks.map((task) => (
+              <React.Fragment key={task.id}>
+                <div className="col-11">
+                  <span
+                    className="form-control bg-white btn mt-2"
+                    style={{ textAlign: "left", fontWeight: "bold" }}
+                  >
+                    {task.title}
+                  </span>
+                </div>
 
-              <div className="col-1">
-                <button
-                  className="delete-task"
-                  onClick={() => handleDelete(task)}
-                >
-                  delete
-                </button>
-              </div>
-            </React.Fragment>
-          ))}
+                <div className="col-1">
+                  <button
+                    className="delete-task"
+                    onClick={() => handleDelete(task)}
+                  >
+                    delete
+                  </button>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </Card>

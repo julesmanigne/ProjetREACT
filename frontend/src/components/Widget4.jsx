@@ -36,7 +36,7 @@ export default function Widget4() {
   const options = {
     type: "doughnut",
     responsive: true,
-    cutout: 85,
+    cutout: 90,
     radius: 95,
     borderRadius: 5,
     maintainAspectRatio: true,
@@ -88,6 +88,7 @@ export default function Widget4() {
       },
     },
   ];
+
   return (
     <Card
       sx={{
@@ -111,25 +112,27 @@ export default function Widget4() {
         {" "}
       </ListItemText>
       <CardContent>
-        <div class="center2">
-          <Typography
-            variant="h7"
-            component="div"
-            fontFamily="Ubuntu"
-            color="grey"
-          >
-            Income : {"£ " + income.toLocaleString()}
-          </Typography>
-        </div>
-        <div class="center2">
-          <Typography
-            variant="h7"
-            component="div"
-            fontFamily="Ubuntu"
-            color="grey"
-          >
-            Spending : {"£ " + spendings.toLocaleString()}
-          </Typography>
+        <div iv>
+          <div class="center2">
+            <Typography
+              variant="h7"
+              component="div"
+              fontFamily="Ubuntu"
+              color="grey"
+            >
+              Income : {"£ " + income.toLocaleString()}
+            </Typography>
+          </div>
+          <div class="center2">
+            <Typography
+              variant="h7"
+              component="div"
+              fontFamily="Ubuntu"
+              color="grey"
+            >
+              Spending : {"£ " + spendings.toLocaleString()}
+            </Typography>
+          </div>
         </div>
         <div className="donut">
           <Doughnut data={data} options={options} plugins={plugins} />
@@ -151,7 +154,7 @@ export default function Widget4() {
                         style={{ color: "rgb(0, 77, 228)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Savings" />
+                    <ListItemText primary="Savings" fontFamily="Ubuntu" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -162,7 +165,10 @@ export default function Widget4() {
                         style={{ color: "rgb(111, 104, 206)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Transportation" />
+                    <ListItemText
+                      primary="Transportation"
+                      fontFamily="Ubuntu"
+                    />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -173,7 +179,7 @@ export default function Widget4() {
                         style={{ color: "rgb(249, 219, 108)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Debt" />
+                    <ListItemText primary="Debt" fontFamily="Ubuntu" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -184,7 +190,7 @@ export default function Widget4() {
                         style={{ color: "rgb(132, 220, 198)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Life" />
+                    <ListItemText primary="Life" fontFamily="Ubuntu" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -195,7 +201,7 @@ export default function Widget4() {
                         style={{ color: "rgb(172, 215, 236)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Housing" />
+                    <ListItemText primary="Housing" fontFamily="Ubuntu" />
                   </ListItemButton>
                 </ListItem>
               </List>
