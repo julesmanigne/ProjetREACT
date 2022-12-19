@@ -42,9 +42,6 @@ export default function App() {
       sx={{
         height: "100%",
         borderRadius: "25px",
-        maxHeight: "400px",
-        maxWidth: "400px",
-        
         fontFamily: "Ubuntu",
         display: "flex",
         flexDirection: "column",

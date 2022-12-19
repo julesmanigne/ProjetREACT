@@ -36,8 +36,6 @@ function WidgetCard() {
       sx={{
         height: "100%",
         
-        maxHeight: "800px",
-        maxWidth: "800px",
         borderRadius: "25px",
         backgroundColor: "#EDF6F9",
         fontFamily: "Ubuntu",
