@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Typography, AppBar, CssBaseline, Grid, Toolbar } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -13,6 +14,10 @@ import Widget6 from "./components/Widget6";
 import AddAlarm from "./pages/AddAlarm";
 import DeleteAlarm from "./pages/Collapsible";
 import ModifyAlarm from "./pages/ModifyAlarm";
+import ResponsiveAppBar from "./components/nav";
+import Admin from "./components/Admin";
+import Home from "./components/Home";
+
 
 export { AddAlarm, DeleteAlarm, ModifyAlarm };
 
@@ -26,54 +31,17 @@ const darkTheme = createTheme({
 });
 
 const App = () => {
+
   return (
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <AppBar position="relative">
-          <Toolbar style={{ background: "#2E3B55" }}>
-            <DashboardIcon />
-            <Typography variant="h6">Widget Dashboard</Typography>
-          </Toolbar>
-        </AppBar>
+        <ResponsiveAppBar></ResponsiveAppBar>
+        <Routes>
+         <Route path="/" element={<Home></Home>}/>
+          <Route path="/admin" element={<Admin></Admin>}/>
+        </Routes>
       </ThemeProvider>
-      <main>
-        <Container maxWidth="xxl">
-          <Box sx={{ bgcolor: "#1D3461", height: "100%", padding: 2 }}>
-            <Box
-              sx={{
-                flexDirection: "row",
-                flexWrap: "wrap",
-                display: "flex",
-                justifyContent: "space-around",
-                p: 5,
-                m: "auto",
-              }}
-            >
-              <Grid container spacing={4} columns={16}>
-                <Grid item lg={8} md={8}>
-                  <WidgetCard></WidgetCard>
-                </Grid>
-                <Grid item lg={8} md={4}>
-                  <WidgetAlarm></WidgetAlarm>
-                </Grid>
-                <Grid item lg={5} md={4}>
-                  <WidgetWeather></WidgetWeather>
-                </Grid>
-                <Grid item lg={6} md={8}>
-                  <Widget4></Widget4>
-                </Grid>
-                <Grid item lg={5} md={8}>
-                  <Widget5></Widget5>
-                </Grid>
-                <Grid item lg={18} md={4}>
-                  <Widget6></Widget6>
-                </Grid>
-              </Grid>
-            </Box>
-          </Box>
-        </Container>
-      </main>
     </>
   );
 };
