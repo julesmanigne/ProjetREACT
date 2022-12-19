@@ -143,7 +143,7 @@ export default function WidgetAlarm() {
                       
                       <List sx={{  display: "flex", border: "1px solid rgb(95, 122, 227);", marginBottom: 2, borderRadius: 5, paddingLeft: 0,  }}>
                        
-                      <Grid item xs={2} sm={4} md={5} sx={{  display: "flex", justifyContent: "center", alignItems: "center"}}>
+                      <Grid item xs={2} sm={4} md={5} sx={{  display: "flex", justifyContent: "center", alignItems: "center", marginLeft: 2, marginRight: 8}}>
                             <button
                               className="AlarmButton2"
                               variant="outlined"
