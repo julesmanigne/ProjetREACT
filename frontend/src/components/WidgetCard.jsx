@@ -33,7 +33,6 @@ function WidgetCard() {
   }
 
   return (
-   
     <Card
       sx={{
         height: "100%",
@@ -44,7 +43,7 @@ function WidgetCard() {
     >
       <CardMedia />
       <CardContent>
-      <div className="centerCard"></div>
+        <div className="centerCard"></div>
         <ListItemText
           style={{ display: "flex", justifyContent: "center" }}
           primary="Memories"
@@ -60,7 +59,7 @@ function WidgetCard() {
         <Swiper
           modules={[Autoplay]}
           slidesPerView={1}
-          autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
         >
           {createSlide()}
           {createSlide()}
