@@ -2,12 +2,15 @@
     border: 1px solid rgb(128, 123, 123);
     padding: 0.5rem;
     border-radius: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
     
 .content-parent {
     height: 0px;
     overflow: hidden;
     transition: height ease 0.9s;
+  
 }
     
 .content-show {
@@ -113,4 +116,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.MuiBox-root.css-1l4w6pd{
+background-color: #fff;
 }

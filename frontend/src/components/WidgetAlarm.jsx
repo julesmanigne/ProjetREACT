@@ -36,6 +36,7 @@ export default function WidgetAlarm() {
     if (window.confirm("Delete?")) {
       const { data } = await axios.delete(`/alarms/alarm/${id}`);
     }
+    fetchAlarms();
   };
 
   const createHandler = async (id) => {
@@ -43,10 +44,11 @@ export default function WidgetAlarm() {
       const payload = {
         "label": name,
         "time": value,
-        "state": true,
+        "status": true,
       };
       const { data } = await axios.post(`/alarms/alarm`, payload);
     }
+    fetchAlarms();
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,7 +73,9 @@ export default function WidgetAlarm() {
       console.log(id);
       console.log(value, name);
       const { data } = await axios.put(`/alarms/alarm/${id}`, payload);
+      
     }
+    fetchAlarms();
   };
 
   const fetchAlarms = async () => {
@@ -215,7 +219,7 @@ export default function WidgetAlarm() {
                     label="Name"
                     variant="outlined"
                     size="small"
-                    style={{ width: "100%", marginBottom: 30 }}
+                    style={{ width: "100%", marginBottom: 30 , marginTop: 30 }}
                   />
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DateTimePicker

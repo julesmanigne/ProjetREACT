@@ -15,7 +15,7 @@ const Alarm = new Schema({
         required: true
     },
 }, {
-    timestamps: true
+    timestamps: false
 }, )
 
 module.exports = mongoose.model('alarms', Alarm)
