@@ -18,21 +18,6 @@ import Switch from '@mui/material/Switch';
 import TextField from "@mui/material/TextField";
 import Collapsible from "../pages/Collapsible";
 
-const columns = [
-    { field: 'label', headerName: 'Label', width: 300 },
-    { field: 'status', headerName: 'Status', width: 600 },
-    { field: 'time', headerName: 'Date and Time', width: 300 },
-    { field: '_id', headerName: 'ID' },
-  ]
- 
-  const rows = [
-    { id: 1, label: 'Snow', status: 'Jon', time: 35 },
-    { id: 2, label: 'Lannister', status: 'Cersei', time: 42 },
-    { id: 3, label: 'Lannister', status: 'Jaime', time: 45 },
-  
-  ];
- 
-
 export default function Admin(){
 
     const [alarms, setAlarms] = useState([]);   
