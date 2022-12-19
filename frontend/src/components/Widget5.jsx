@@ -44,6 +44,8 @@ export default function App() {
         borderRadius: "25px",
         maxHeight: "400px",
         maxWidth: "400px",
+        minHeight: "400px",
+        minWidth: "400px",
         fontFamily: "Ubuntu",
         display: "flex",
         flexDirection: "column",
