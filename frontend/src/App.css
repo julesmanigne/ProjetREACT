@@ -98,19 +98,6 @@
 .buttonPhoto:hover{
     box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
 }
-
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3%;
-}
-.center2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .swiper-slide-active{
     display: flex;
     justify-content: center;
