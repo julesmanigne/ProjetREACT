@@ -43,7 +43,7 @@ const ResponsiveAppBar = () => {
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'Poppins',
                             fontWeight: 400,
-                            letterSpacing: '.3rem',
+                            letterSpacing: '.15rem',
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
