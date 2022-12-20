@@ -209,7 +209,7 @@ export default function WidgetAlarm() {
                               </LocalizationProvider>
                               <Switch checked={checked} onChange={switchHandler}></Switch>
                               <h3>ON?</h3>
-                              <Button type="submit" style={{ width: '100%', height: 40}} size="small" onClick={() => updateHandler(data._id)}><AddCircleIcon /></Button>
+                              <Button type="submit" style={{ width: '100%', height: 40, color: colors.indigo[100]}} size="small" onClick={() => updateHandler(data._id)}><AddCircleIcon /></Button>
                             </form>
                           </Collapsible2>
                       </List>    
@@ -247,7 +247,7 @@ export default function WidgetAlarm() {
                   </LocalizationProvider>
                   <Button
                     type="submit"
-                    style={{ width: "95%", height: 40 }}
+                    style={{ width: "95%", height: 40 , color: colors.indigo[100]}}
                     size="small"
                     onClick={() => createHandler()}
                   >

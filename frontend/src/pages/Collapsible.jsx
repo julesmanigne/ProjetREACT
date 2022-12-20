@@ -17,8 +17,7 @@ const Collapsible = (props) => {
 
         <div>
             <Box textAlign='center'>
-
-                <button onClick={toggle} style={{ marginBottom: 5, height: 40}} className="AlarmButton">{props.label}</button>
+                <button onClick={toggle} style={{ marginBottom: 5, height:0, width: 97, paddingBottom:25}} className="AlarmButton">{props.label}</button>
                 <div className='content-parent' ref={contentRef} style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
                     <div className='content'> {props.children}</div>
                 </div>
