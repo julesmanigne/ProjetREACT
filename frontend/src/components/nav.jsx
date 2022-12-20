@@ -99,8 +99,8 @@ const ResponsiveAppBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">
-                                        <Link to={`/${page}`} style={{ textDecoration: 'none' }}>
+                                    <Typography>
+                                        <Link to={`/${page}`} style={{ textDecoration: 'none', width: "100%" }}>
                                             {page}
                                         </Link>
                                     </Typography>
@@ -132,7 +132,7 @@ const ResponsiveAppBar = () => {
                             <button className='adminButton'
                                 key={page}
                                 onClick={handleCloseNavMenu}>
-                                <Link to={`/${page}`} style={{ textDecoration: 'none'}}>
+                                <Link to={`/${page}`} style={{ textDecoration: 'none', width: 100}}>
                                     {page}
                                 </Link>
                             </button>
