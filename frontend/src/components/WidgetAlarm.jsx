@@ -142,7 +142,7 @@ export default function WidgetAlarm() {
                   <Box sx={{}}>
                     <Grid item xs={18}>
                       
-                      <List sx={{  display: "flex", border: "1px solid rgb(95, 122, 227);", borderRadius: 5, marginBottom:2, paddingLeft: 0,  }}>
+                      <List sx={{  display: "flex", border: "1px solid rgb(111,106,248);", borderRadius: 5, marginBottom:2, paddingLeft: 0,  }}>
                        
                       <Grid item xs={2} sm={4} md={5} sx={{  display: "flex", justifyContent: "center", alignItems: "center", marginLeft: 2, marginRight: 8}}>
                             <button
@@ -162,9 +162,9 @@ export default function WidgetAlarm() {
                           secondary={d2}
                           primaryTypographyProps={{
                             fontFamily: "Poppins",
-                            fontSize: 30,
+                            fontSize: 22,
                             fontWeight: "bold",
-                            letterSpacing: 2,
+                            letterSpacing: 1,
                           }}
                         >
                           {" "}
@@ -175,7 +175,7 @@ export default function WidgetAlarm() {
                             primary={data.status ? "ON" : "OFF"}
                             primaryTypographyProps={{
                               fontFamily: "Poppins",
-                              fontSize: 30,
+                              fontSize: 25,
                               fontStyle: 'italic',
                               fontWeight: 1000,
                               letterSpacing: 0,
