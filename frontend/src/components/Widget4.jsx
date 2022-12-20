@@ -15,9 +15,18 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import CircleIcon from "@mui/icons-material/Circle";
 
+import { tokens } from "../theme";
+import { useTheme } from "@mui/material";
+
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Widget4() {
+
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+
   const Savings = faker.commerce.price(2000, 3000, 0);
   const Transportation = faker.commerce.price(1000, 1200, 0);
   const Debt = faker.commerce.price(3500, 3700, 0);
@@ -98,9 +107,9 @@ export default function Widget4() {
     <Card
       sx={{
         height: "100%",
-        borderRadius: "20px",
+        borderRadius: "10px",
         marginLeft: "auto",
-        backgroundColor: "#fff",
+        backgroundColor: colors.primary[600],
         boxShadow: 3,
       }}
     >
@@ -109,6 +118,7 @@ export default function Widget4() {
         sx={{ display: "flex", justifyContent: "center", marginTop:2 }}
         primary="Spending Plan"
         primaryTypographyProps={{
+          color: colors.grey[100],
           fontFamily: "Poppins",
           fontSize: 40,
           fontWeight: 400,
@@ -124,15 +134,15 @@ export default function Widget4() {
               variant="h7"
               component="div"
               fontFamily="Poppins"
-              color="grey"
+               color= {colors.grey[100]}
             >
               Income
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               component="div"
               fontFamily="Poppins"
-              color="black"
+              color={colors.grey[300]}
             >
               {" £ " + income.toLocaleString()}
             </Typography>
@@ -142,15 +152,15 @@ export default function Widget4() {
               variant="h7"
               component="div"
               fontFamily="Poppins"
-              color="grey"
+              color= {colors.grey[100]}
             >
               Spending
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               component="div"
               fontFamily="Poppins"
-              color="black"
+              color={colors.grey[300]}
             >
               {"£ " + spendings.toLocaleString()}
             </Typography>
@@ -178,7 +188,8 @@ export default function Widget4() {
                         style={{ color: "rgba(111,106,248, 1)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Savings" fontFamily="Poppins" />
+                    <ListItemText  sx={{color: colors.grey[200]}}
+                      primary="Savings" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -190,6 +201,7 @@ export default function Widget4() {
                       />
                     </ListItemIcon>
                     <ListItemText
+                    sx={{color: colors.grey[200]}}
                       primary="Transportation"
                       fontFamily="Poppins"
                     />
@@ -203,7 +215,7 @@ export default function Widget4() {
                         style={{ color: "rgba(111,106,248, 0.6)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Debt" fontFamily="Poppins" />
+                    <ListItemText sx={{color: colors.grey[200]}} primary="Debt" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -214,7 +226,7 @@ export default function Widget4() {
                         style={{ color: "rgba(111,106,248, 0.4)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Life" fontFamily="Poppins" />
+                    <ListItemText sx={{color: colors.grey[200]}}  primary="Life" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -225,7 +237,7 @@ export default function Widget4() {
                         style={{ color: "rgba(111,106,248, 0.2)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Housing" fontFamily="Poppins" />
+                    <ListItemText sx={{color: colors.grey[200]}} primary="Housing" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
               </List>

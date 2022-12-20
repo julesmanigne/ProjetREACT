@@ -13,7 +13,14 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 
+import { tokens } from "../theme";
+import { useTheme } from "@mui/material";
+
 function WidgetCard() {
+
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   function createSlide() {
     return (
       <SwiperSlide>
@@ -36,8 +43,8 @@ function WidgetCard() {
       sx={{
         height: "100%",
         boxShadow: 3,
-        borderRadius: "25px",
-        backgroundColor: "#fff",
+        borderRadius: "10px",
+        backgroundColor: colors.primary[600],
         fontFamily: "Poppins",
       }}
     >
@@ -48,6 +55,7 @@ function WidgetCard() {
           style={{ display: "flex", justifyContent: "center", marginTop:2  }}
           primary="Memories"
           primaryTypographyProps={{
+            color: colors.grey[100],
             fontFamily: "Poppins",
             fontSize: 40,
             fontWeight: 400,

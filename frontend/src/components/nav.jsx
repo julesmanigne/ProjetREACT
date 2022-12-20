@@ -15,9 +15,20 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
+import { useContext } from "react";
+import { ColorModeContext, tokens } from "../theme";
+import { useTheme } from "@mui/material";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+
 const pages = ['admin'];
 
 const ResponsiveAppBar = () => {
+
+    const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(ColorModeContext);
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -29,7 +40,7 @@ const ResponsiveAppBar = () => {
     };
 
     return (
-        <AppBar position="static" style={{ background: '#6F6AF8', }}>
+        <AppBar position="static" style={{ background: colors.indigo[500], }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <DashboardIcon sx={{ display: { xs: 'none', md: 'flex', }, mr: 1}} />
@@ -44,13 +55,19 @@ const ResponsiveAppBar = () => {
                             fontFamily: 'Poppins',
                             fontWeight: 400,
                             letterSpacing: '.15rem',
-                            color: 'inherit',
+                            color: colors.primary[900],
                             textDecoration: 'none',
                         }}
                     >
                         Widget Dashboard
                     </Typography>
-
+                    <IconButton onClick={colorMode.toggleColorMode}>
+          {theme.palette.mode === "dark" ? (
+            <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon />
+          )}
+        </IconButton>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -104,7 +121,7 @@ const ResponsiveAppBar = () => {
                             fontFamily: 'Poppins',
                             fontWeight: 400,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            color: colors.primary[500],
                             textDecoration: 'none',
                         }}
                     >
@@ -114,9 +131,7 @@ const ResponsiveAppBar = () => {
                         {pages.map((page) => (
                             <button className='adminButton'
                                 key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block'}}
-                            >
+                                onClick={handleCloseNavMenu}>
                                 <Link to={`/${page}`} style={{ textDecoration: 'none'}}>
                                     {page}
                                 </Link>

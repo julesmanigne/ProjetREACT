@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Typography, AppBar, CssBaseline, Grid, Toolbar } from "@mui/material";
+import { Typography, AppBar, CssBaseline, Grid, Toolbar, useTheme } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import WidgetCard from "./WidgetCard";
 import Box from "@mui/material/Box";
@@ -14,27 +14,22 @@ import Widget6 from "./Widget6";
 import AddAlarm from "../pages/AddAlarm";
 import DeleteAlarm from "../pages/Collapsible";
 import ModifyAlarm from "../pages/ModifyAlarm";
+import { tokens } from "../theme";
 
 export { AddAlarm, DeleteAlarm, ModifyAlarm };
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "light",
-    background: {
-      default: "#F8FAFB",
-    },
-  },
-});
-
 const Home = () => {
+
+  const theme = useTheme();
+const colors = tokens(theme.palette.mode);
 
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
       </ThemeProvider>
       <main>
-          <Box sx={{ bgcolor: "#F8FAFB", height: "100%", padding: 2, }}>
+         
             <Box
               sx={{
                 flexDirection: "row",
@@ -66,7 +61,7 @@ const Home = () => {
                 </Grid>
               </Grid>
             </Box>
-          </Box>
+         
       </main>
     </>
   );

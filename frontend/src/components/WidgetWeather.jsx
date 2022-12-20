@@ -4,8 +4,16 @@ import "../index.css";
 import ListItemText from "@mui/material/ListItemText";
 import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
+import Box from '@mui/material/Box';
+import { tokens } from "../theme";
+import { useTheme } from "@mui/material";
+import { Grid } from "swiper";
+import { flexbox } from "@mui/system";
+
 
 export default function WidgetWeather() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [data, setData] = useState([]);
   const [location, setLocation] = useState("Paris");
 
@@ -35,8 +43,8 @@ export default function WidgetWeather() {
     <Card
       sx={{
         height: "100%",
-        borderRadius: "25px",
-        backgroundColor: "#fff",
+        borderRadius: "10px",
+        backgroundColor: colors.primary[600],
         boxShadow: 3,
       }}
     >
@@ -45,6 +53,7 @@ export default function WidgetWeather() {
           sx={{ display: "flex", justifyContent: "center" }}
           primary="Weather"
           primaryTypographyProps={{
+            color: colors.grey[100],
             fontFamily: "Poppins",
             fontSize: 40,
             fontWeight: 400,
@@ -57,49 +66,72 @@ export default function WidgetWeather() {
         <div className="app">
           <div className="search">
             <input
-              style={{ padding: 10, marginTop: 40, textAlign: "center", width: "90%"}}
+              style={{ padding: 10, marginTop: 40, textAlign: "center", width: "90%",  backgroundColor : colors.indigo[900], color:"#fff"}}
               value={location}
               onChange={(event) => setLocation(event.target.value)}
               onKeyPress={search}
-              placeholder="Location"
+              placeholder="Enter location"
               type="text"
             />
           </div>
           <div className="container">
             <div className="top">
               <div className="location">
-                <p>{data.name}</p>
+              <ListItemText sx={{
+                color: colors.grey[200]
+              }}>
+                <h1>{data.name}</h1>
+                </ListItemText>
               </div>
               <div className="temp">
-                <h1>
-                  {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
-                </h1>
+              <ListItemText sx={{
+                color: colors.grey[200]
+              }}>
+                  {data.main ? <h2>{data.main.temp.toFixed()}°C</h2> : null}
+                </ListItemText>
               </div>
+              
               <div className="descriptions">
+              <ListItemText sx={{
+                color: colors.grey[200]
+              }}>
                 <p>{data.weather ? <p>{data.weather[0].main}</p> : null} </p>
+                </ListItemText>
               </div>
             </div>
 
             {data.name !== undefined && (
               <div className="bottom">
+                <Box  sx={{
+                  display: 'flex',
+                  justifyContent: 'space-evenly',
+                  textAlign: 'center',
+                  width: '100%',
+                  margin: '2rem auto',
+                  padding:'1rem',
+                  borderRadius: '10px',
+                  color: colors.grey[200],
+                  backgroundColor : colors.indigo[900],
+                 }}>
                 <div className="feels">
                   {data.main ? (
                     <p className="bold">{data.main.feels_like.toFixed()}°C</p>
                   ) : null}
-                  <p>Ressentie</p>
+                  <p>Feels Like</p>
                 </div>
                 <div className="humidity">
                   {data.main ? (
                     <p className="bold">{data.main.humidity}%</p>
                   ) : null}
-                  <p>Humidité</p>
+                  <p>Humidity</p>
                 </div>
                 <div className="wind">
                   {data.wind ? (
                     <p className="bold">{data.wind.speed.toFixed()} KPH</p>
                   ) : null}
-                  <p> Vent</p>
+                  <p> Wind</p>
                 </div>
+                </Box>
               </div>
             )}
           </div>
