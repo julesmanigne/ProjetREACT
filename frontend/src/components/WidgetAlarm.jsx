@@ -94,7 +94,7 @@ export default function WidgetAlarm() {
     <>
       <Card sx={{
         height: "100%", borderRadius: "25px",
-
+        boxShadow: 3,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -113,10 +113,10 @@ export default function WidgetAlarm() {
             sx={{ display: 'flex', justifyContent: 'center', marginTop:-5 }}
             primary="Alarms"
             primaryTypographyProps={{
-              fontFamily: "Ubuntu",
+              fontFamily: "Poppins",
               fontSize: 40,
               fontWeight: 400,
-              letterSpacing: 4,
+              letterSpacing: 0,
             }}
           >
             {" "}
@@ -161,10 +161,10 @@ export default function WidgetAlarm() {
                           primary={data.label}
                           secondary={d2}
                           primaryTypographyProps={{
-                            fontFamily: "Ubuntu",
+                            fontFamily: "Poppins",
                             fontSize: 30,
                             fontWeight: "bold",
-                            letterSpacing: 1,
+                            letterSpacing: 2,
                           }}
                         >
                           {" "}
@@ -174,7 +174,7 @@ export default function WidgetAlarm() {
                             sx={{ margin: 'auto' }}
                             primary={data.status ? "ON" : "OFF"}
                             primaryTypographyProps={{
-                              fontFamily: "Ubuntu",
+                              fontFamily: "Poppins",
                               fontSize: 30,
                               fontStyle: 'italic',
                               fontWeight: 1000,

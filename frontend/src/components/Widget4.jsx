@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
-
+import "../index.css";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -58,11 +58,11 @@ export default function Widget4() {
           Number(Housing),
         ],
         backgroundColor: [
-          "rgba(0, 77, 228, 0.6)",
-          "rgba(111, 104, 206, 0.6)",
-          "rgba(249, 219, 108, 0.6)",
-          "rgba(132, 220, 198, 0.6)",
-          "rgba(172, 215, 236, 0.6)",
+          "rgba(111,106,248, 1)",
+          "rgba(111,106,248, 0.8)",
+          "rgba(111,106,248, 0.6)",
+          "rgba(111,106,248, 0.4)",
+          "rgba(111,106,248, 0.2)",
         ],
         hoverOffset: 5,
       },
@@ -78,7 +78,7 @@ export default function Widget4() {
 
         const text = "£" + spendings.toLocaleString();
         ctx.fillStyle = "black"; //<======= here
-        ctx.font = "18px Ubuntu";
+        ctx.font = "16px Poppins";
         ctx.textAlign = "center";
         ctx.textBaseLine = "middle";
 
@@ -86,7 +86,7 @@ export default function Widget4() {
 
         const text_2 = "Spending";
         ctx.fillStyle = "grey"; //<======= here
-        ctx.font = "18px Ubuntu";
+        ctx.font = "16px Poppins";
         ctx.textAlign = "center";
         ctx.textBaseLine = "middle";
         ctx.fillText(text_2, x, y + 22);
@@ -101,6 +101,7 @@ export default function Widget4() {
         borderRadius: "20px",
         marginLeft: "auto",
         backgroundColor: "#fff",
+        boxShadow: 3,
       }}
     >
       <CardMedia />
@@ -108,10 +109,10 @@ export default function Widget4() {
         sx={{ display: "flex", justifyContent: "center", marginTop:2 }}
         primary="Spending Plan"
         primaryTypographyProps={{
-          fontFamily: "Ubuntu",
+          fontFamily: "Poppins",
           fontSize: 40,
           fontWeight: 400,
-          letterSpacing: 4,
+          letterSpacing: 0,
         }}
       >
         {" "}
@@ -122,7 +123,7 @@ export default function Widget4() {
             <Typography
               variant="h7"
               component="div"
-              fontFamily="Ubuntu"
+              fontFamily="Poppins"
               color="grey"
             >
               Income
@@ -130,7 +131,7 @@ export default function Widget4() {
             <Typography
               variant="h6"
               component="div"
-              fontFamily="Ubuntu"
+              fontFamily="Poppins"
               color="black"
             >
               {" £ " + income.toLocaleString()}
@@ -140,7 +141,7 @@ export default function Widget4() {
             <Typography
               variant="h7"
               component="div"
-              fontFamily="Ubuntu"
+              fontFamily="Poppins"
               color="grey"
             >
               Spending
@@ -148,7 +149,7 @@ export default function Widget4() {
             <Typography
               variant="h6"
               component="div"
-              fontFamily="Ubuntu"
+              fontFamily="Poppins"
               color="black"
             >
               {"£ " + spendings.toLocaleString()}
@@ -162,7 +163,9 @@ export default function Widget4() {
           <Box
             sx={{
               display: "flex",
+              flexWrap: 'wrap',
               justifyContent: "flex-end",
+              flexDirection: 'column',
             }}
           >
             <nav aria-label="main mailbox folders">
@@ -172,10 +175,10 @@ export default function Widget4() {
                     <ListItemIcon>
                       <CircleIcon
                         fontSize="small"
-                        style={{ color: "rgb(0, 77, 228)" }}
+                        style={{ color: "rgba(111,106,248, 1)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Savings" fontFamily="Ubuntu" />
+                    <ListItemText primary="Savings" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -183,12 +186,12 @@ export default function Widget4() {
                     <ListItemIcon>
                       <CircleIcon
                         fontSize="small"
-                        style={{ color: "rgb(111, 104, 206)" }}
+                        style={{ color: "rgba(111,106,248, 0.8)" }}
                       />
                     </ListItemIcon>
                     <ListItemText
                       primary="Transportation"
-                      fontFamily="Ubuntu"
+                      fontFamily="Poppins"
                     />
                   </ListItemButton>
                 </ListItem>
@@ -197,10 +200,10 @@ export default function Widget4() {
                     <ListItemIcon>
                       <CircleIcon
                         fontSize="small"
-                        style={{ color: "rgb(249, 219, 108)" }}
+                        style={{ color: "rgba(111,106,248, 0.6)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Debt" fontFamily="Ubuntu" />
+                    <ListItemText primary="Debt" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -208,10 +211,10 @@ export default function Widget4() {
                     <ListItemIcon>
                       <CircleIcon
                         fontSize="small"
-                        style={{ color: "rgb(132, 220, 198)" }}
+                        style={{ color: "rgba(111,106,248, 0.4)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Life" fontFamily="Ubuntu" />
+                    <ListItemText primary="Life" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -219,10 +222,10 @@ export default function Widget4() {
                     <ListItemIcon>
                       <CircleIcon
                         fontSize="small"
-                        style={{ color: "rgb(172, 215, 236)" }}
+                        style={{ color: "rgba(111,106,248, 0.2)" }}
                       />
                     </ListItemIcon>
-                    <ListItemText primary="Housing" fontFamily="Ubuntu" />
+                    <ListItemText primary="Housing" fontFamily="Poppins" />
                   </ListItemButton>
                 </ListItem>
               </List>

@@ -35,10 +35,10 @@ function WidgetCard() {
     <Card
       sx={{
         height: "100%",
-        
+        boxShadow: 3,
         borderRadius: "25px",
         backgroundColor: "#fff",
-        fontFamily: "Ubuntu",
+        fontFamily: "Poppins",
       }}
     >
       <CardMedia />
@@ -48,10 +48,10 @@ function WidgetCard() {
           style={{ display: "flex", justifyContent: "center", marginTop:2  }}
           primary="Memories"
           primaryTypographyProps={{
-            fontFamily: "Ubuntu",
+            fontFamily: "Poppins",
             fontSize: 40,
             fontWeight: 400,
-            letterSpacing: 4,
+            letterSpacing: 0,
           }}
         >
           {" "}

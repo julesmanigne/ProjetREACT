@@ -34,8 +34,7 @@ const Home = () => {
         <CssBaseline />
       </ThemeProvider>
       <main>
-        <Container maxWidth="xxl">
-          <Box sx={{ bgcolor: "#F8FAFB", height: "100%", padding: 2 }}>
+          <Box sx={{ bgcolor: "#F8FAFB", height: "100%", padding: 2, }}>
             <Box
               sx={{
                 flexDirection: "row",
@@ -46,7 +45,7 @@ const Home = () => {
                 m: "auto",
               }}
             >
-              <Grid container spacing={1} columns={12}>
+              <Grid container spacing={2} columns={12}>
                 <Grid item lg={6} md={6} sm={12} xs={12}>
                   <WidgetCard></WidgetCard>
                 </Grid>
@@ -68,7 +67,6 @@ const Home = () => {
               </Grid>
             </Box>
           </Box>
-        </Container>
       </main>
     </>
   );

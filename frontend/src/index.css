@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap%27");
 * {
   margin: 0;
   padding: 0;
 }
+.body{
+  font-family:  "Poppins";
+}
+
 .donut {
   height: 28vh;
   width: 28vh;
@@ -151,6 +153,7 @@
   width: 50%;
   height: 40vh;
   margin-bottom: 15px;
+
 }
 .crytpo-eth {
   float: left;
@@ -165,19 +168,15 @@
   border: none;
   cursor: pointer;
   line-height: 1.2rem;
-  font-weight: 900;
+  font-weight: 500;
   background: rgb(111,106,248);
   padding: 8px 12px 9px;
-  font-family: "Ubuntu";
+  font-family: "Poppins";
   font-size: 13px;
   border-radius: 20px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
-}
-
-.resetZoomEth {
-  margin-left: 50px;
 }
 
 .resetZoomEth:hover {
@@ -190,19 +189,15 @@
   border: none;
   cursor: pointer;
   line-height: 1.2rem;
-  font-weight: 900;
+  font-weight: 500;
   background: rgb(247, 164, 99);
   padding: 8px 12px 9px;
   font-size: 13px;
-  font-family: "Ubuntu";
+  font-family: "Poppins";
   border-radius: 20px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
-}
-
-.resetZoomBtc {
-  margin-left: 50px;
 }
 
 .resetZoomBtc:hover {
@@ -229,11 +224,11 @@
   border: none;
   cursor: pointer;
   line-height: 1.2rem;
-  font-weight: 900;
+  font-weight: 500;
   background: rgb(111,106,248);
   padding: 8px 35px 9px;
   font-size: 13px;
-  font-family: "Ubuntu";
+  font-family: "Poppins";
   border-radius: 20px;
   color: #fff;
   height: 36px;
@@ -247,11 +242,11 @@
   border: none;
   cursor: pointer;
   line-height: 1.2rem;
-  font-weight: 900;
+  font-weight: 500;
   background: rgb(111,106,248);
 
   font-size: 13px;
-  font-family: "Ubuntu";
+  font-family: "Poppins";
   border-radius: 20px;
   color: #fff;
   height: 26px;

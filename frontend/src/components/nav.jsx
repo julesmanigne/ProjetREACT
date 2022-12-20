@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const pages = ['admin'];
 
@@ -28,10 +29,10 @@ const ResponsiveAppBar = () => {
     };
 
     return (
-        <AppBar position="static" style={{ background: '#6F6AF8' }}>
+        <AppBar position="static" style={{ background: '#6F6AF8', }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <DashboardIcon sx={{ display: { xs: 'none', md: 'flex', }, mr: 1}} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -40,8 +41,8 @@ const ResponsiveAppBar = () => {
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
+                            fontFamily: 'Poppins',
+                            fontWeight: 400,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
@@ -82,7 +83,7 @@ const ResponsiveAppBar = () => {
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">
-                                        <Link to={`/${page}`}>
+                                        <Link to={`/${page}`} style={{ textDecoration: 'none' }}>
                                             {page}
                                         </Link>
                                     </Typography>
@@ -95,13 +96,13 @@ const ResponsiveAppBar = () => {
                         variant="h5"
                         noWrap
                         component="a"
-                        href=""
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
+                            fontFamily: 'Poppins',
+                            fontWeight: 400,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
@@ -109,17 +110,17 @@ const ResponsiveAppBar = () => {
                     >
                         Widget Dashboard
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
                         {pages.map((page) => (
-                            <Button
+                            <button className='adminButton'
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'white', display: 'block'}}
                             >
-                                <Link to={`/${page}`}>
+                                <Link to={`/${page}`} style={{ textDecoration: 'none'}}>
                                     {page}
                                 </Link>
-                            </Button>
+                            </button>
                         ))}
                     </Box>
                 </Toolbar>

@@ -94,7 +94,7 @@ export default function Widget6() {
         position: "top",
         align: "start",
         font: {
-          family: "Ubuntu Condensed",
+          family: "Poppins",
           size: 25,
           weight: "bold",
         },
@@ -191,7 +191,7 @@ export default function Widget6() {
         position: "top",
         align: "start",
         font: {
-          family: "Ubuntu Condensed",
+          family: "Poppins",
           size: 25,
           weight: "bold",
         },
@@ -335,19 +335,19 @@ export default function Widget6() {
       sx={{
         height: "100%",
         width: "100%",
-       
+        boxShadow: 3,
         borderRadius: "20px",
         backgroundColor: "#fff",
       }}
     >
       <ListItemText
         sx={{ display: "flex", justifyContent: "center", marginTop:2  }}
-        primary="Crypto"
+        primary="Crypto Currencies"
         primaryTypographyProps={{
-          fontFamily: "Ubuntu",
+          fontFamily: "Poppins",
           fontSize: 40,
           fontWeight: 400,
-          letterSpacing: 4,
+          letterSpacing: 0,
         }}
       >
         {" "}
@@ -356,13 +356,13 @@ export default function Widget6() {
         <div className="crytpo-container">
           <div className="crytpo-btc">
             <button className="resetZoomBtc" onClick={resetZoomBtc}>
-              reset zoom
+              Reset zoom
             </button>
             <Line ref={chartRefBtc} options={options_btc} data={data_btc} />
           </div>
           <div className="crytpo-eth">
             <button className="resetZoomEth" onClick={resetZoomEth}>
-              reset zoom
+              Reset zoom
             </button>
             <Line ref={chartRefEth} options={options_eth} data={data_eth} />
           </div>

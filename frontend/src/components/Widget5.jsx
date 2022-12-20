@@ -42,13 +42,14 @@ export default function App() {
       sx={{
         height: "100%",
         borderRadius: "25px",
-        fontFamily: "Ubuntu",
+        fontFamily: "Poppins",
         display: "flex",
         flexDirection: "column",
         height: 700,
         overflow: "hidden",
         overflowY: "scroll",
         marginLeft: "auto",
+        boxShadow: 3,
         "&::-webkit-scrollbar": {
           width: 0,
         },
@@ -60,10 +61,10 @@ export default function App() {
             sx={{ display: "flex", justifyContent: "center", marginTop:2 }}
             primary="To Do"
             primaryTypographyProps={{
-              fontFamily: "Ubuntu",
+              fontFamily: "Poppins",
               fontSize: 40,
               fontWeight: 400,
-              letterSpacing: 4,
+              letterSpacing: 0,
             }}
           >
             {" "}
@@ -106,7 +107,7 @@ export default function App() {
                     className="delete-task"
                     onClick={() => handleDelete(task)}
                   >
-                    delete
+                    Delete
                   </button>
                 </div>
               </React.Fragment>

@@ -37,6 +37,7 @@ export default function WidgetWeather() {
         height: "100%",
         borderRadius: "25px",
         backgroundColor: "#fff",
+        boxShadow: 3,
       }}
     >
       <CardContent>
@@ -44,10 +45,10 @@ export default function WidgetWeather() {
           sx={{ display: "flex", justifyContent: "center" }}
           primary="Weather"
           primaryTypographyProps={{
-            fontFamily: "Ubuntu",
+            fontFamily: "Poppins",
             fontSize: 40,
             fontWeight: 400,
-            letterSpacing: 4,
+            letterSpacing: 0,
           }}
         >
           {" "}
