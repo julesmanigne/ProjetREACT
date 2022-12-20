@@ -18,10 +18,8 @@ import {
   Legend,
 } from "chart.js";
 
-
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
-
 
 ChartJS.register(
   CategoryScale,
@@ -36,7 +34,6 @@ ChartJS.register(
 );
 
 export default function Widget6() {
-
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -311,7 +308,7 @@ export default function Widget6() {
         },
         borderWidth: 2,
         tension: 0.5,
-        pointRadius: 0,
+        pointRadius: 1,
         pointHoverRadius: 0,
       },
     ],
@@ -333,7 +330,7 @@ export default function Widget6() {
         },
         borderWidth: 2,
         tension: 0.5,
-        pointRadius: 0,
+        pointRadius: 1,
         pointHoverRadius: 0,
       },
     ],
@@ -346,11 +343,11 @@ export default function Widget6() {
         width: "100%",
         boxShadow: 3,
         borderRadius: "10px",
-       backgroundColor: colors.primary[600],
+        backgroundColor: colors.primary[600],
       }}
     >
       <ListItemText
-        sx={{ display: "flex", justifyContent: "center", marginTop:2  }}
+        sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}
         primary="Crypto Currencies"
         primaryTypographyProps={{
           color: colors.grey[100],

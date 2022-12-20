@@ -1,7 +1,6 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Grid } from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import "../App.css";
 
@@ -52,7 +51,7 @@ function WidgetCard() {
       <CardContent>
         <div className="centerCard"></div>
         <ListItemText
-          style={{ display: "flex", justifyContent: "center", marginTop:2  }}
+          style={{ display: "flex", justifyContent: "center", marginTop: 2 }}
           primary="Memories"
           primaryTypographyProps={{
             color: colors.grey[100],
