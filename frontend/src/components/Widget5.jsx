@@ -3,9 +3,14 @@ import "../index.css";
 import ListItemText from "@mui/material/ListItemText";
 import React, { useState, useEffect } from "react";
 
+import { tokens } from "../theme";
+import { useTheme } from "@mui/material";
+
 export default function App() {
   const [input, setInput] = useState("");
   const [tasks, setTasks] = useState([]);
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
   useEffect(() => {
     if (localStorage.getItem("localTasks")) {
@@ -41,7 +46,7 @@ export default function App() {
     <Card
       sx={{
         height: "100%",
-        borderRadius: "25px",
+        borderRadius: "10px",
         fontFamily: "Poppins",
         display: "flex",
         flexDirection: "column",
@@ -49,6 +54,7 @@ export default function App() {
         overflow: "hidden",
         overflowY: "scroll",
         marginLeft: "auto",
+        backgroundColor: colors.primary[600],
         boxShadow: 3,
         "&::-webkit-scrollbar": {
           width: 0,
@@ -58,7 +64,8 @@ export default function App() {
       <div className="app">
         <div className="container">
           <ListItemText
-            sx={{ display: "flex", justifyContent: "center", marginTop:2 }}
+            sx={{ display: "flex", justifyContent: "center", marginTop:2, color: colors.grey[100],
+          }}
             primary="To Do"
             primaryTypographyProps={{
               fontFamily: "Poppins",
@@ -71,7 +78,7 @@ export default function App() {
           </ListItemText>
           <div className="form-input">
             <input
-             style={{ padding: 10, marginTop: 42, textAlign: "center", width: "90%"}}
+             style={{ padding: 10, marginTop: 42, textAlign: "center", width: "90%",  backgroundColor : colors.indigo[900]}}
             className="todoSearch"
               name="task"
               value={input}
@@ -91,6 +98,9 @@ export default function App() {
             )}
           </div>
           <div className="task-container">
+          <ListItemText sx={{
+                color: colors.grey[200]
+              }}>
             {tasks.map((task) => (
               <React.Fragment key={task.id}>
                 <div className="col-11">
@@ -112,6 +122,7 @@ export default function App() {
                 </div>
               </React.Fragment>
             ))}
+              </ListItemText>
           </div>
         </div>
       </div>

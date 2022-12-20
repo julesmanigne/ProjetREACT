@@ -24,10 +24,17 @@ import ToggleButton from '@mui/material/ToggleButton';
 import Switch from '@mui/material/Switch';
 import Box from '@mui/material/Box';
 
+import { tokens } from "../theme";
+import { useTheme } from "@mui/material";
+
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 export default function WidgetAlarm() {
+
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   const [value, setValue] = React.useState(dayjs());
   const [name, setName] = useState("");
   const [alarms, setAlarms] = useState([]);
@@ -93,7 +100,7 @@ export default function WidgetAlarm() {
   return (
     <>
       <Card sx={{
-        height: "100%", borderRadius: "25px",
+        height: "100%", borderRadius: "10px",
         boxShadow: 3,
         display: "flex",
         flexDirection: "column",
@@ -102,7 +109,7 @@ export default function WidgetAlarm() {
         height: 700,
         overflow: "hidden",
         overflowY: "scroll",
-        backgroundColor: "#fff",
+        backgroundColor: colors.primary[600],
         "&::-webkit-scrollbar": {
           width: 0
         }
@@ -113,6 +120,7 @@ export default function WidgetAlarm() {
             sx={{ display: 'flex', justifyContent: 'center' }}
             primary="Alarms"
             primaryTypographyProps={{
+              color: colors.grey[100],
               fontFamily: "Poppins",
               fontSize: 40,
               fontWeight: 400,
@@ -142,7 +150,7 @@ export default function WidgetAlarm() {
                   <Box sx={{}}>
                     <Grid item xs={18}>
                       
-                      <List sx={{  display: "flex", border: "1px solid rgb(111,106,248);", borderRadius: 5, marginBottom:2, paddingLeft: 0,  }}>
+                      <List sx={{  display: "flex", border: "1px solid rgb(111,106,248);", borderRadius: 2, marginBottom:2, paddingLeft: 0,  }}>
                        
                       <Grid item xs={2} sm={4} md={5} sx={{  display: "flex", justifyContent: "center", alignItems: "center", marginLeft: 2, marginRight: 8}}>
                             <button

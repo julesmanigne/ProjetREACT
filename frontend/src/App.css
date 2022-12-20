@@ -23,7 +23,7 @@
     cursor: pointer;
     font-size: 12px;
     line-height: 1;
-    border-radius: 500px;
+    border-radius: 10px;
     transition-property: background-color,border-color,color,box-shadow,filter;
     transition-duration: .2s;
     border: 1px solid transparent;
@@ -51,7 +51,7 @@
     cursor: pointer;
     font-size: 12px;
     line-height: 1;
-    border-radius: 500px;
+    border-radius: 10px;
     transition-property: background-color,border-color,color,box-shadow,filter;
     transition-duration: .2s;
     border: 1px solid transparent;
@@ -80,7 +80,7 @@
     margin-left: 1%;
     font-size: 12px;
     line-height: 1;
-    border-radius: 500px;
+    border-radius: 10px;
     transition-property: background-color,border-color,color,box-shadow,filter;
     transition-duration: .2s;
     border: 1px solid transparent;
@@ -109,26 +109,19 @@ background-color: #fff;
 }
 
 .adminButton{
-     
-    display: inline-block;
+    
     outline: none;
     cursor: pointer;
-    margin-left: 1%;
-    font-size: 12px;
-    line-height: 1;
-    border-radius: 500px;
-    transition-property: background-color,border-color,color,box-shadow,filter;
-    transition-duration: .2s;
+    font-size: 13px;
+    line-height: 3;
+    border-radius: 10px;
     border: 1px solid transparent;
     letter-spacing: 2px;
     min-width: 80px;
     text-transform: uppercase;
-    white-space: normal;
     font-weight: 700;
-    text-align: center;
     color: #fff;
     background-color: rgb(255, 255, 255);
-    height: 48px;
-    text-decoration: none;
+    height: 100%;
     margin-left: 90%;
 }

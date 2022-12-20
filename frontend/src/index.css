@@ -50,7 +50,7 @@
 }
 
 ::placeholder {
-  color: rgb(80, 79, 79);
+  color: rgb(41, 41, 41); 
 }
 
 .todoSearch{
@@ -120,18 +120,6 @@
   margin: 1rem 0;
 }
 
-.app .bottom {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  width: 100%;
-
-  margin: 2rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: #F2F2FD;
-}
 
 .bold {
   font-weight: 700;
@@ -173,7 +161,7 @@
   padding: 8px 12px 9px;
   font-family: "Poppins";
   font-size: 13px;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
@@ -194,7 +182,7 @@
   padding: 8px 12px 9px;
   font-size: 13px;
   font-family: "Poppins";
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
@@ -207,7 +195,7 @@
 .imageCaroussel {
   height: 100%;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 10px;
   max-height: 400px;
   max-width: 700px;
 }
@@ -229,7 +217,7 @@
   padding: 8px 35px 9px;
   font-size: 13px;
   font-family: "Poppins";
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
   height: 36px;
   transition: all 75ms ease-in-out;
@@ -247,7 +235,7 @@
 
   font-size: 13px;
   font-family: "Poppins";
-  border-radius: 20px;
+  border-radius: 7px;
   color: #fff;
   height: 26px;
   width: 50px;
