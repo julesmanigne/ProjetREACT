@@ -19,16 +19,11 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
-import CheckIcon from '@mui/icons-material/Check';
-import ToggleButton from '@mui/material/ToggleButton';
 import Switch from '@mui/material/Switch';
 import Box from '@mui/material/Box';
 
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
-
-
-const label = { inputProps: { "aria-label": "Switch demo" } };
 
 export default function WidgetAlarm() {
 
@@ -41,7 +36,7 @@ export default function WidgetAlarm() {
 
   const deleteHandler = async (id) => {
     if (window.confirm("Delete?")) {
-      const { data } = await axios.delete(`/alarms/alarm/${id}`);
+      await axios.delete(`/alarms/alarm/${id}`);
     }
     fetchAlarms();
   };
@@ -53,7 +48,7 @@ export default function WidgetAlarm() {
         "time": value,
         "status": true,
       };
-      const { data } = await axios.post(`/alarms/alarm`, payload);
+      await axios.post(`/alarms/alarm`, payload);
     }
     fetchAlarms();
   };
@@ -79,7 +74,7 @@ export default function WidgetAlarm() {
       };
       console.log(id);
       console.log(value, name);
-      const { data } = await axios.put(`/alarms/alarm/${id}`, payload);
+      await axios.put(`/alarms/alarm/${id}`, payload);
       
     }
     fetchAlarms();
@@ -100,7 +95,7 @@ export default function WidgetAlarm() {
   return (
     <>
       <Card sx={{
-        height: "100%", borderRadius: "10px",
+        borderRadius: "10px",
         boxShadow: 3,
         display: "flex",
         flexDirection: "column",

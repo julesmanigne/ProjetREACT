@@ -1,6 +1,3 @@
-const {
-    PromiseProvider
-} = require('mongoose')
 const Alarm = require('../models/alarmModel')
 
 createAlarm = (req, res) => {

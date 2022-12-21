@@ -7,8 +7,6 @@ import Card from "@mui/material/Card";
 import Box from '@mui/material/Box';
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
-import { Grid } from "swiper";
-import { flexbox } from "@mui/system";
 
 
 export default function WidgetWeather() {
@@ -20,6 +18,7 @@ export default function WidgetWeather() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=874ca5f59012a84fda38e98bb41e047a&units=metric`;
 
   const searchLocation = () => {
+    // eslint-disable-next-line
     {
       axios.get(url).then((res) => {
         setData(res.data);
@@ -35,9 +34,9 @@ export default function WidgetWeather() {
   };
 
   useEffect(() => {
-    // search once after first render
-    searchLocation();
-  }, []); // no dependency: execute it once after first render
+    
+    searchLocation();// eslint-disable-next-line
+  }, []); 
 
   return (
     <Card

@@ -1,14 +1,10 @@
 import React from "react";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import {
-  Typography,
-  AppBar,
   CssBaseline,
   Grid,
-  Toolbar,
   useTheme,
 } from "@mui/material";
-import DashboardIcon from "@mui/icons-material/Dashboard";
 import WidgetCard from "./WidgetCard";
 import Box from "@mui/material/Box";
 import WidgetAlarm from "./WidgetAlarm";
@@ -16,16 +12,9 @@ import WidgetWeather from "./WidgetWeather";
 import Widget4 from "./Widget4";
 import Widget5 from "./Widget5";
 import Widget6 from "./Widget6";
-import AddAlarm from "../pages/AddAlarm";
-import DeleteAlarm from "../pages/Collapsible";
-import ModifyAlarm from "../pages/ModifyAlarm";
-import { tokens } from "../theme";
-
-export { AddAlarm, DeleteAlarm, ModifyAlarm };
 
 const Home = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   return (
     <>
