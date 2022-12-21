@@ -1,20 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
-.body{
-  font-family:  "Poppins";
+.body {
+  font-family: "Poppins";
 }
 
 .donut {
   height: 28vh;
   width: 28vh;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .p {
   font-size: 1.6rem;
@@ -38,8 +35,8 @@
   padding: 0.7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 10px;
-  border: 0 solid rgb(111,106,248);
-  background: #F2F2FD;
+  border: 0 solid rgb(111, 106, 248);
+  background: #f2f2fd;
   color: rgb(0, 0, 0);
 }
 
@@ -50,15 +47,14 @@
 }
 
 ::placeholder {
-  color: rgb(41, 41, 41); 
+  color: rgb(41, 41, 41);
 }
 
-.todoSearch{
+.todoSearch {
   width: 90%;
   height: 40px;
 }
 .container {
-
   margin: auto;
   padding: 0.1rem;
   top: 10%;
@@ -84,7 +80,6 @@
   align-self: center;
   justify-content: center;
   text-align: center;
-  
 }
 
 .app form input {
@@ -120,7 +115,6 @@
   margin: 1rem 0;
 }
 
-
 .bold {
   font-weight: 700;
 }
@@ -141,7 +135,6 @@
   width: 50%;
   height: 40vh;
   margin-bottom: 15px;
-
 }
 .crytpo-eth {
   float: left;
@@ -157,7 +150,7 @@
   cursor: pointer;
   line-height: 1.2rem;
   font-weight: 500;
-  background: rgb(111,106,248);
+  background: rgb(111, 106, 248);
   padding: 8px 12px 9px;
   font-family: "Poppins";
   font-size: 13px;
@@ -213,7 +206,7 @@
   cursor: pointer;
   line-height: 1.2rem;
   font-weight: 500;
-  background: rgb(111,106,248);
+  background: rgb(111, 106, 248);
   padding: 8px 35px 9px;
   font-size: 13px;
   font-family: "Poppins";
@@ -231,7 +224,7 @@
   cursor: pointer;
   line-height: 1.2rem;
   font-weight: 500;
-  background: rgb(111,106,248);
+  background: rgb(111, 106, 248);
 
   font-size: 13px;
   font-family: "Poppins";
