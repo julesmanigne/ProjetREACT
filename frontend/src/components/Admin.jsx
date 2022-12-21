@@ -52,7 +52,7 @@ export default function Admin() {
       };
       console.log(id);
       console.log(value, name);
-      const { data } = await axios.put(`/alarms/alarm/${id}`, payload);
+      await axios.put(`/alarms/alarm/${id}`, payload);
     }
     fetchAlarms();
   };
@@ -71,7 +71,7 @@ export default function Admin() {
 
   const deleteHandler = async (id) => {
     if (window.confirm("Delete?")) {
-      const { data } = await axios.delete(`/alarms/alarm/${id}`);
+      await axios.delete(`/alarms/alarm/${id}`);
     }
     fetchAlarms();
   };
@@ -83,7 +83,7 @@ export default function Admin() {
         time: value,
         status: true,
       };
-      const { data } = await axios.post(`/alarms/alarm`, payload);
+      await axios.post(`/alarms/alarm`, payload);
     }
     fetchAlarms();
   };
