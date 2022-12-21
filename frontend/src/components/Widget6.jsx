@@ -73,7 +73,7 @@ export default function Widget6() {
   };
 
   useEffect(() => {
-    fechtData();
+    fechtData();// eslint-disable-next-line
   }, []);
 
   const resetZoomBtc = () => {
@@ -105,7 +105,7 @@ export default function Widget6() {
           weight: "bold",
         },
       },
-      zoom: {
+      zoom: {// eslint-disable-next-line
         pan: {
           // pan options and/or events
         },
@@ -122,7 +122,7 @@ export default function Widget6() {
             enabled: true,
           },
           mode: "x",
-        },
+        },// eslint-disable-next-line
         pan: {
           enabled: true,
           mode: "xy",
@@ -160,7 +160,7 @@ export default function Widget6() {
         },
         grid: {
           display: false,
-        },
+        },// eslint-disable-next-line
         ticks: {
           display: true,
           autoSkip: true,
@@ -219,7 +219,7 @@ export default function Widget6() {
             enabled: true,
           },
           mode: "x",
-        },
+        },// eslint-disable-next-line
         pan: {
           enabled: true,
           mode: "xy",
@@ -257,7 +257,7 @@ export default function Widget6() {
         },
         grid: {
           display: false,
-        },
+        },// eslint-disable-next-line
         ticks: {
           display: true,
           autoSkip: true,
