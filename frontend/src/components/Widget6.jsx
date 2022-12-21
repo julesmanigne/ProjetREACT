@@ -142,7 +142,7 @@ export default function Widget6() {
           maxTicksLimit: 4,
           maxRotation: 0,
           font: {
-            family: "Nunito",
+            family: "Poppins",
             size: 12,
             weight: "bold",
           },
@@ -160,7 +160,7 @@ export default function Widget6() {
           maxTicksLimit: 3,
           maxRotation: 0,
           font: {
-            family: "Nunito",
+            family: "Poppins",
             size: 12,
             weight: "bold",
           },
@@ -224,7 +224,7 @@ export default function Widget6() {
           maxTicksLimit: 4,
           maxRotation: 0,
           font: {
-            family: "Nunito",
+            family: "Poppins",
             size: 12,
             weight: "bold",
           },
@@ -242,7 +242,7 @@ export default function Widget6() {
           maxTicksLimit: 3,
           maxRotation: 0,
           font: {
-            family: "Nunito",
+            family: "Poppins",
             size: 12,
             weight: "bold",
           },
