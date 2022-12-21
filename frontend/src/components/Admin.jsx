@@ -20,9 +20,7 @@ import Collapsible from "../pages/Collapsible";
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 
-
 export default function Admin() {
-
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -89,7 +87,7 @@ export default function Admin() {
   };
 
   return (
-    <div style={{ height: 400, width: "100%", marginTop:10 }}>
+    <div style={{ height: 400, width: "100%", marginTop: 10 }}>
       <Collapsible label="Add">
         <form onSubmit={handleSubmit}>
           <TextField
@@ -139,7 +137,13 @@ export default function Admin() {
 
           return (
             <div key={id}>
-              <Box sx={{ display: "flex", justifyContent: "center",  color:colors.primary[100] }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  color: colors.primary[100],
+                }}
+              >
                 <Grid item xs={4} md={6}>
                   <List
                     sx={{
@@ -152,7 +156,7 @@ export default function Admin() {
                     }}
                   >
                     <ListItemText
-                      sx={{  color:colors.primary[800]  }}
+                      sx={{ color: colors.primary[800] }}
                       primary={data.label}
                       secondary={d2}
                       primaryTypographyProps={{
@@ -164,9 +168,14 @@ export default function Admin() {
                     >
                       {" "}
                     </ListItemText>
-                    <Grid sx={{ margin: 5,  color:colors.primary[300]  }} item xs={2} md={4}>
+                    <Grid
+                      sx={{ margin: 5, color: colors.primary[300] }}
+                      item
+                      xs={2}
+                      md={4}
+                    >
                       <ListItemText
-                        sx={{  color:colors.primary[300] }}
+                        sx={{ color: colors.primary[300] }}
                         primary={data.status ? "ON" : "OFF"}
                         primaryTypographyProps={{
                           fontFamily: "Open Sans",

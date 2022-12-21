@@ -3,7 +3,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import ListItemText from "@mui/material/ListItemText";
 import "../App.css";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
@@ -16,14 +15,13 @@ import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 
 function WidgetCard() {
-
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   function createSlide() {
     return (
       <SwiperSlide>
-        <img src={imgUrl()} class="imageCaroussel" />
+        <img src={imgUrl()} class="imageCaroussel" alt="SwiperJS" />
       </SwiperSlide>
     );
   }

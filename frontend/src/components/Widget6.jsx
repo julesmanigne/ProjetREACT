@@ -41,7 +41,7 @@ export default function Widget6() {
   const [chartEth, setChartEth] = useState([]);
 
   const chartRefBtc = useRef(null);
-  const chartRefEth = useRef(null); // the ref is used to reset zoom, and potentially for adding more buttons (f.e. zoom +10% ...)
+  const chartRefEth = useRef(null);
 
   const date = new Date();
   var day = date.getDate();
@@ -62,9 +62,6 @@ export default function Widget6() {
       axios.spread((...allData) => {
         const allDataBTC = allData[0].data;
         const allDataETH = allData[1].data;
-
-        // console.log(allDataBTC);
-        // console.log(allDataETH);
 
         setChart(allDataBTC);
         setChartEth(allDataETH);
@@ -106,14 +103,7 @@ export default function Widget6() {
         },
       },
       zoom: {
-        pan: {
-          // pan options and/or events
-        },
-        limits: {
-          // axis limits
-        },
         zoom: {
-          // zoom options and/or events
           wheel: {
             enabled: true,
             speed: 0.1,
@@ -155,9 +145,6 @@ export default function Widget6() {
       y: {
         display: true,
         scaleLabel: false,
-        ticks: {
-          display: false,
-        },
         grid: {
           display: false,
         },
@@ -172,11 +159,6 @@ export default function Widget6() {
             weight: "bold",
           },
         },
-      },
-    },
-    elements: {
-      point: {
-        radius: 0,
       },
     },
   };
@@ -203,14 +185,7 @@ export default function Widget6() {
         },
       },
       zoom: {
-        pan: {
-          // pan options and/or events
-        },
-        limits: {
-          // axis limits
-        },
         zoom: {
-          // zoom options and/or events
           wheel: {
             enabled: true,
             speed: 0.1,
@@ -252,9 +227,6 @@ export default function Widget6() {
       y: {
         display: true,
         scaleLabel: false,
-        ticks: {
-          display: false,
-        },
         grid: {
           display: false,
         },
@@ -269,11 +241,6 @@ export default function Widget6() {
             weight: "bold",
           },
         },
-      },
-    },
-    elements: {
-      point: {
-        radius: 0,
       },
     },
   };
